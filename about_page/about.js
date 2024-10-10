@@ -1,3 +1,4 @@
+//Scroll Visibility Animation
 const animationElements = document.querySelectorAll('.why-kantipur * , .welcome-wrapper *, .msg-from-cont *');
 console.log(animationElements);
 

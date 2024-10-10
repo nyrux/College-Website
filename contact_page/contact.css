@@ -1,7 +1,9 @@
+/* Utilities */
 @import url('../utilities/navbar/navbar.css');
 @import url('../utilities/poster/poster.css');
 @import url('../utilities/footer/footer.css');
 
+/* Poster */
 .poster-text-cont{
     display: flex;
     justify-content: center;
@@ -11,6 +13,7 @@
     color: var(--textColor);
     word-spacing: 10px;
 }
+/* Contact Section */
 .contact-wrapper{
     height: fit-content;
     width: 100vw;
@@ -128,6 +131,7 @@ input,textarea:focus{
     transition: var(--transition);
     cursor: pointer;
 }
+/* Contact Responsive */
 @media(max-width:996px){
     .poster-text-cont{
         font-size: 2em;
