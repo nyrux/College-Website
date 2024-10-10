@@ -2,7 +2,7 @@
 .apply-footer{
     height: 50vh;
     width: 100vw;
-    background-image: url('../media_src/graduates_bg.jpg');
+    background-image: url('graduates_bg.jpg');
     background-position: center;
     background-size: 100% 100%;
     margin-top: 10vh;
