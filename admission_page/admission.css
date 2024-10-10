@@ -1,6 +1,3 @@
-@import url('../utilities/navbar/navbar.css'); /* NAVBAR */
-@import url('../utilities/poster/poster.css'); /* POSTER */
-@import url('../utilities/footer/footer.css'); /* Footer */
 
 :root{
     --inputMargin : 4vh;
