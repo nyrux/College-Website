@@ -1,4 +1,4 @@
-/* Landing section */
+/* Landing section -----------------------------------------------------------*/
 .poster{
     height: 88vh;
     width: 100%;
@@ -40,7 +40,8 @@
     background: linear-gradient(to right, #333333,#33333380,#33333300);
 }
 
-/* College intro section */
+
+/* College intro section------------------------------------------------------------------------ */
 .clg-intro-cont{
     margin-top: 10vh;
     height: 100vh;
@@ -83,4 +84,161 @@
     height: 100%;
     width: 80%;
     border-radius: 2px;
+}
+.course-intro{
+    width: 60%;
+    text-align: center;
+    color: #3d3d3d;
+    padding: 4vh;
+}
+
+
+/* Courses Section ------------------------------------------------------------------------*/
+.courses-wrapper{
+    height: fit-content;
+    width: 100%;
+    padding: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.course-title-cont{
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.course-title{
+    font-size: 3em;
+    font-weight: 600;
+    color: rgb(255, 153, 0);
+}
+/* Course Slider---------------------------------------------------------------- */
+.course-container {
+    margin-top: 5vh;
+    height: 50vh;
+    width: 50vw;
+    border-left: 10px solid var(--secThemeColor);
+    border-top: 10px solid var(--secThemeColor);
+    box-shadow: 5px 5px 10px 0px rgba(158, 158, 158, 0.712);
+    display: flex;
+    overflow: hidden; /* Keep this to hide overflow */
+    position: relative; /* Ensure relative positioning */
+}
+
+.course-box {
+    height: 50vh;
+    width: 500px; /* Width of each course box */
+    flex-shrink: 0; /* Prevent boxes from shrinking */
+    transition: transform 0.5s ease; /* Add transition for smooth sliding */
+    position: absolute; /* Position absolutely for manual control */
+}
+.slide-btn-cont{
+    width: 680px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2vh;
+    padding: 2vh;
+}
+.slide-btn{
+    height: 6vh;
+    width: 6vh;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #535353;
+    color: #fff;
+    cursor: pointer;
+}
+.slide-btn:hover{
+    background-color: rgb(2, 133, 255);
+    transition: .5s ease;
+    transform: scale(1.25,1.25);
+}
+.slide-btn:active{
+    background-color: #fff;
+}
+.course-box{
+    height: 100%;
+    width: 500px;
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+}
+.course-poster,.course-desc{
+    height: auto;
+    width: auto;
+}
+.course-poster{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.course-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: skew(-15deg);
+    height: 6vh;
+    width: 170px;
+    color: #fff;
+}
+.course-img{
+    width: 100%;
+    height: 35vh;
+    margin-top: 4vh;
+}
+.course-desc{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6vh;
+}
+.about-course{
+    text-align: justify;
+    width: 80%;
+    color: #fff;
+    font-size: .8em;
+}
+.course-btn{
+    height: 6vh;
+    width: 20vh;
+    border: 2px solid white;
+    color: #fff;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0);
+}
+.course-btn:hover{
+    background-color: #fff;
+    color: #585858;
+    transition: .25s ease;
+    cursor: pointer;
+}
+.about-comp,.comp-title{
+    background-color: #585858;
+}
+.bio-title,.about-bio{
+    background-color: #17ad1e;
+}
+.hm-title,.about-hm{
+    background-color: #0e7fdb;
+}
+.about-business,.business-title{
+    background-color: #f86814;
+}
+.enroll-cont{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #c54323;
+    padding: 8vh;
+    width: 80vw;
 }
