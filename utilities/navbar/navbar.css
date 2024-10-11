@@ -20,7 +20,7 @@ body{
     overflow-x: hidden;
 }
 .navbar{
-    height: 12vh;
+    height: 14vh;
     width: 100vw;
     display: grid;
     grid-template-columns: 2fr 5fr 3fr;
