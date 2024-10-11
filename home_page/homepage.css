@@ -1,0 +1,40 @@
+.poster{
+    height: 88vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+.desc-cont,.std-img-cont{
+    height: auto;
+    width: auto;
+}
+.desc-cont{
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.head-title-cont{
+    color: var(--textColor);
+    font-size: 3em;
+    font-weight: 700;
+    padding: 2vh;
+}
+.desc-paragraph-cont{
+    color: var(--textColor);
+    text-align: justify;
+    width: 90%;
+    font-size: .8em;
+    padding: 2vh;
+}
+.std-img-cont{
+    background-image: url('student.jpg');
+    background-position: center;
+    background-size: 100% 100%;
+}
+.dispersion-effect{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #333333,#33333380,#33333300);
+}
