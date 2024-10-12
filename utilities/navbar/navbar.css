@@ -7,7 +7,7 @@
     --primThemeColor : #333333;
     --secThemeColor : #34aeff;
     --textColor : #fff;
-    --transition: .25s ease;
+    --transition: .5s ease;
     --navBtnFontSize : .85em;
 }
 *{
@@ -80,7 +80,7 @@ body{
     align-items: center;
 }
 #applyBtn{
-    padding: 1.25vh 5vh;
+    padding: 1.5vh 5vh;
     font-size: var(--navBtnFontSize);
     background-color: var(--secThemeColor);
     color: var(--textColor);
