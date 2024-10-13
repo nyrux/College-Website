@@ -40,7 +40,42 @@
     background: linear-gradient(to right, #333333,#33333380,#33333300);
 }
 
-
+@media(max-width:992px){
+    .head-title-cont{
+        font-size: 2.5em;
+    }
+}
+@media(max-width:768px){
+    .poster{
+        height: 70vh;
+    }
+    .head-title-cont{
+        font-size: 2em;
+    }
+}
+@media(max-width:576px){
+    .poster{
+        height: 60vh;
+    }
+    .head-title-cont{
+        font-size: 1.25em;
+    }
+    .desc-paragraph-cont{
+        font-size: .6em;
+    }
+}
+@media(max-width:418px){
+    .poster{
+        height: 50vh;
+    }
+    .head-title-cont{
+        font-size: 1em;
+    }
+    .desc-paragraph-cont{
+        font-size: .5em;
+        padding: 1vh;
+    }
+}
 /* College intro section------------------------------------------------------------------------ */
 .clg-intro-cont{
     margin-top: 10vh;
@@ -85,15 +120,55 @@
     width: 80%;
     border-radius: 2px;
 }
-.course-intro{
-    width: 60%;
-    text-align: center;
-    color: #3d3d3d;
-    padding: 4vh;
+
+@media(max-width:1200px){
+    .clg-name-cont{
+        font-size: 2em;
+    }
+    .building-img{
+        height: 75%;
+    }
+    .intro-paragraph{
+        width: 90%;
+    }
 }
-
-
+@media(max-width:992px){
+    .clg-intro-cont{
+        padding: 5vh 10vh;
+    }
+    .intro-paragraph{
+        width: 100%;
+        font-size: .9em;
+    }
+    .building-img{
+        width: 100%;
+    }
+}
+@media(max-width:768px){
+    .clg-intro-cont{
+        padding: 3vh;
+    }
+    .clg-name-cont{
+        font-size: 1.5em;
+    }
+    .building-img{
+        height: 65%;
+    }
+    .intro-paragraph{
+        font-size: .75em;
+    }
+}
+@media(max-width:576px){
+    .clg-intro-cont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+    }
+}
 /* Courses Title Section ------------------------------------------------------------------------*/
+
 .courses-wrapper{
     height: fit-content;
     width: 100%;
@@ -102,6 +177,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.course-intro{
+    width: 60%;
+    text-align: center;
+    color: #3d3d3d;
+    padding: 4vh;
 }
 .course-title-cont{
     height: fit-content;
@@ -119,14 +200,14 @@
 /* Course Box Section --------------------------------------------- */
 .course-box-cont{
     margin-top: 5vh;
-    height: 65vh;
+    height: fit-content;
     width: 100%;
     display: grid;
     grid-template-columns: 2fr 3fr;
     gap: 6vh;
 }
 .course-box{
-    height: auto;
+    height: 65vh;
     width: auto;
     background-position: center;
     background-size: 100% 100%;
@@ -180,9 +261,44 @@
     transition: .25s ease;
 }
 
-
+@media(max-width:822px){
+    .about-course{
+        margin-top: 3vh;
+        font-size: .5em;
+    }
+}
+@media(max-width:768px){
+    .course-box-cont{
+        height: fit-content;
+    }
+    .learn-more-btn{
+        padding: 1vh 3vh;
+    }
+    .course-intro{
+        width: 80%;
+    }
+    .course-box{
+        height: 65vh;
+    }
+}
+@media(max-width:576px){
+    .course-title{
+        font-size: 2em;
+    }
+    .course-intro{
+        width: 100%;
+    }
+    .course-box-cont{
+        grid-template-columns: none;
+        grid-template-rows: repeat(2,1fr);
+    }
+    .course-box{
+        height: 40vh;
+    }
+}
 /* Life At KIC Section ------------------------------------- */
 
+/* Explore Kic Lifestyle DIV */
 .explore-life-cont{
     margin-top: 15vh;
     height: 50vh;
@@ -217,13 +333,33 @@
     font-weight: 700;
 }
 .life-p{
-    margin-top: 4vh;
+    padding: 2vh;
     color: #fff;
     font-size: .9em;
     width: 80%;
     height: 50%;
     text-align: justify;
 }
+@media(max-width:992px){
+    .life-title{
+        font-size: 2em;
+    }
+    .life-p{
+        font-size: .75em;
+    }
+}
+@media(max-width:768px){
+    .life-desc-box{
+        width: 80%;
+    }
+}
+@media(max-width:576px){
+    .life-desc-box{
+        width: 95%;
+    }
+}
+/* Life Events Grid ++++++++++++++*/
+
 .life-wrapper{
     margin-top: 10vh;
     height: 130vh;
