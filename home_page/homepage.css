@@ -93,11 +93,11 @@
 }
 
 
-/* Courses Section ------------------------------------------------------------------------*/
+/* Courses Title Section ------------------------------------------------------------------------*/
 .courses-wrapper{
     height: fit-content;
     width: 100%;
-    padding: 4vh;
+    padding: 6vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,183 +113,99 @@
 .course-title{
     font-size: 3em;
     font-weight: 600;
-    color: rgb(255, 153, 0);
-}
-/* Course Slider---------------------------------------------------------------- */
-.course-container {
-    margin-top: 5vh;
-    height: 50vh;
-    width: 50vw;
-    border-left: 10px solid var(--secThemeColor);
-    border-top: 10px solid var(--secThemeColor);
-    box-shadow: 5px 5px 10px 0px rgba(158, 158, 158, 0.712);
-    display: flex;
-    overflow: hidden; /* Keep this to hide overflow */
-    position: relative; /* Ensure relative positioning */
+    color: #08b12d;
 }
 
-.course-box {
-    height: 50vh;
-    width: 500px; /* Width of each course box */
-    flex-shrink: 0; /* Prevent boxes from shrinking */
-    transition: transform 0.5s ease; /* Add transition for smooth sliding */
-    position: absolute; /* Position absolutely for manual control */
-}
-.slide-btn-cont{
-    width: 680px;
-    display: flex;
-    justify-content: flex-end;
-    gap: 2vh;
-    padding: 2vh;
-}
-.slide-btn{
-    height: 6vh;
-    width: 6vh;
-    border-radius: 50%;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #535353;
-    color: #fff;
-    cursor: pointer;
-}
-.slide-btn:hover{
-    background-color: rgb(2, 133, 255);
-    transition: .5s ease;
-    transform: scale(1.25,1.25);
-}
-.slide-btn:active{
-    background-color: #fff;
+/* Course Box Section --------------------------------------------- */
+.course-box-cont{
+    margin-top: 5vh;
+    height: 65vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 6vh;
 }
 .course-box{
-    height: 100%;
-    width: 500px;
-    display: grid;
-    grid-template-columns: 3fr 4fr;
-}
-.course-poster,.course-desc{
     height: auto;
     width: auto;
-}
-.course-poster{
+    background-position: center;
+    background-size: 100% 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    align-items: flex-end;
+    overflow: hidden;
 }
 .course-name{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: skew(-15deg);
-    height: 6vh;
-    width: 170px;
-    color: #fff;
-}
-.course-img{
     width: 100%;
-    height: 35vh;
-    margin-top: 4vh;
-}
-.course-desc{
+    text-align: center;
+    font-size: 1.35em;
+    padding: 3vh 0vh;
     height: 100%;
+    color: #fff;
+    font-weight: 500;
+    background-color: #073f13ab;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    gap: 6vh;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 350px;
+    backdrop-filter: blur(5px);
 }
 .about-course{
     text-align: justify;
     width: 80%;
-    color: #fff;
-    font-size: .8em;
+    font-size: .7em;
+    font-weight: 300;
 }
-.course-btn{
-    height: 6vh;
-    width: 20vh;
-    border: 2px solid white;
-    color: #fff;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0);
+.science{
+    background-image: url('sci_std.jpg');
 }
-.course-btn:hover{
-    background-color: #fff;
-    color: #585858;
-    transition: .25s ease;
-    cursor: pointer;
+.mgmt{
+    background-image: url('mgmt_std.jpg');
 }
-.about-comp,.comp-title{
-    background-color: #585858;
-}
-.bio-title,.about-bio{
-    background-color: #17ad1e;
-}
-.hm-title,.about-hm{
-    background-color: #0e7fdb;
-}
-.about-business,.business-title{
-    background-color: #f86814;
-}
-.enroll-cont{
-    margin-top: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #c54323;
-    padding: 8vh;
-    width: 80vw;
-}
-
-
-/* Life at kic section ---------------------------------------------------------- */
-.life-wrapper{
-    margin-top: 5vh;
-    height: fit-content;
-    width: 100%;
-}
-.top-row{
-    height: 70vh;
-    padding: 4vh 10vh;
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    gap: 10px;
-}
-.bottom-row{
-    height: 70vh;
-}
-.life-poster-cont,.top-row-img-cont{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.life-poster{
-    height: 100%;
-    width: 80%;
-    background-color: #46a0a0;
-    display: flex;
-    flex-direction: column;
-}
-.life-poster:hover{
-    transform: translateY(-20px);
+.course-box:hover{
+    background-size: 110% 110%;
     transition: .5s ease;
 }
-.arrow-cont{
+.learn-more-btn{
+    padding: 2vh 6vh;
+    border: none;
+    background-color: #fff;
+    color: #073f13;
+    font-weight: 500;
+    cursor: pointer;
+}
+.learn-more-btn:hover{
+    transform: scale(1.1,1.1);
+    transition: .25s ease;
+}
+
+
+/* Life At KIC Section ------------------------------------- */
+
+.explore-life-cont{
+    margin-top: 15vh;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.arrow-btn-cont{
     height: 10vh;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-size: 1.25em;
-    padding-right: 5vh;
-    color: rgba(0, 0, 0, 0.432);
+    padding-right: 6vh;
 }
-.poster-desc-cont{
+.fa-angle-right{
+    color: #fff;
+}
+.life-desc-box{
     height: 100%;
-    padding: 2vh;
+    width: 60%;
+    background-color: rgb(74, 75, 78);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -297,54 +213,133 @@
 }
 .life-title{
     color: #fff;
+    font-size: 3em;
+    font-weight: 700;
+}
+.life-p{
+    margin-top: 4vh;
+    color: #fff;
+    font-size: .9em;
+    width: 80%;
+    height: 50%;
+    text-align: justify;
+}
+.life-wrapper{
+    margin-top: 10vh;
+    height: 130vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.life-top-row{
+    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 4vh;
+    gap: 4vh;
+}
+.life-bottom-row{
+    height: 40%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 5vh;
+    gap: 5vh;
+}
+
+.life-img-cont,.life-center-btn,.life-btn-cont{
+    height: auto;
+    width: auto;
+}
+.life-center-btn{
+    display: grid;
+    grid-template-rows: 3fr 2fr;
+}
+.life-btn-cont{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
-    font-weight: 500;
+    flex-direction: column;
 }
-.life-p{
-    text-align: justify;
+.life-at-title{
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--secThemeColor);
+}
+.life-desc{
     width: 80%;
-    color: #fff;
-    font-size: .9em;
+    text-align: center;
+    color: #464646;
 }
-.event-img{
-    background-position: center;
-    background-size: 100% 100%;
+.view-btn{
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    border-radius: 1vh;
+    align-items: center;
+    width: 8vh;
+    height: 8vh;
+    border-radius: 50%;
+    border: 1px solid #000;
+    color: #000;
+    transform: rotate(-45deg);
 }
-.event-name{
-    width: 30%;
-    text-align: center;
-    padding: 2vh 0vh;
-    color: rgb(116, 116, 116);
-    font-size: 1.3em;
-    font-weight: 600;
-    background-color: #ffffff;
+.view-btn:hover{
+    color: #fff;
+    background-color: #000;
+    transform: rotate(0deg);
+    transition: .5s ease;
+    cursor: pointer;
+}
+.life-img-cont{
+    background-position: center;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+.event-desc{
+    height: 100%;
+    width: 100%;
     position: relative;
-    bottom: 30px;
-    border-radius: 10px;
+    top: 100%;
+    background-color: rgba(37, 37, 37, 0.548);
+    transition: top 0.5s ease;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(5px);
 }
-.eve-1{
-    background-image: url('fest.jpeg');
+.event-title{
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 5px solid var(--secThemeColor);
+    width: 70%;
 }
-.bottom-row{
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    padding: 5vh 10vh;
-    gap: 5vh;
+.about-event{
+    margin-top: 5vh;
+    width: 80%;
+    font-size: .8em;
+    text-align: justify;
 }
-.eve2{
-    background-image: url('trip_pokhara.jpg');
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-.eve3{
+.life-img-1{
     background-image: url('holi.jpg');
-    grid-row-start: 1;
-    grid-row-end: 3;
+}
+.life-img-2{
+    background-image: url('dashain_fest.jpeg');
+}
+.life-img-3{
+    background-image: url('carnival.jpg');
+}
+.life-img-4{
+    background-image: url('orientation.png');
+}
+.life-img-5{
+    background-image: url('christmas.jpg');
+}
+.life-img-6{
+    background-image: url('sports.jpg');
+}
+.life-img-cont:hover{
+    background-size: 120% 120%;
+    transition: .3s ease;
 }
