@@ -83,7 +83,7 @@
 /* College intro section------------------------------------------------------------------------ */
 .clg-intro-cont{
     margin-top: 10vh;
-    height: 100vh;
+    height: fit-content;
     width: 100%;
     padding: 5vh 10vh;
     display: grid;
@@ -197,15 +197,16 @@
 }
 .course-box-wrapper {
     height: fit-content;
-    width: 100%;
+    width: fit-content;
     padding: 4vh 8vh;
     display: flex;
     flex-direction: row;
-    gap: 4vh;
+    gap: 40px;
 }
 
 .course-box {
     height: 60vh;
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -230,7 +231,6 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;   
-    backdrop-filter: blur(10px);
 }
 .course-name{
     font-weight: 500;
@@ -248,20 +248,78 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8vh;
     margin-bottom: 4vh;
+    gap: 4vh;
 }
 .enroll-btn,.more-btn{
     border: none;
     color: #17ad23;
-    background-color: #fff;
-    border: 1px solid #17ad23;
-    padding: 2vh 6vh;
+    background-color: rgba(255, 255, 255, 0);
+}
+.fa-angle-right{
+    margin-left: 1vh;
 }
 .enroll-btn:hover,.more-btn:hover{
-    transform: scale(1.1,1.1);
-    color: #fff;
-    background-color: #17ad23;
+    transform: translateX(20px);
     transition: .25s ease;
     cursor: pointer;
+    color: #21ec32;
+}
+.slide-btns-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0vh 1vh;
+    transform: translateY(-220px);
+    display: none;
+}
+.slide-btn{
+    padding: 1vh 2vh;    
+    color: #fff;
+    background-color: rgb(27, 167, 57);
+    cursor: pointer;
+}
+.slide-btn:hover{
+    background-color: #21ec32;
+    transition: .25s ease;
+}
+@media(max-width:992px){
+    .our-courses{
+        font-size: 2.25em;
+    }
+    .course-p{
+        width: 80%;
+        font-size: .9em;
+    }
+    .course-box-wrapper{
+        overflow-x: visible;
+    }
+    .course-box{
+        overflow: visible;
+        width: 40vw;
+        transition: right 0.5s ease;
+        right: 0;
+    }
+    .about-course{
+        top: 40px;
+        font-size: .8em;
+        justify-content: center;
+        height: 45vh;
+        gap: 4vh;
+    }
+    .course-desc{
+        margin-top: 0vh;
+    }
+    .enroll-btn,.more-btn{
+        font-size: .9em;
+    }
+    .slide-btns-cont{
+        display: flex;
+    }
+}
+
+@media(max-width:768px){
+    .course-box{
+        width: 75vw;
+    }
 }
