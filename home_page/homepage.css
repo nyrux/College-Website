@@ -297,7 +297,6 @@
     .course-box{
         overflow: visible;
         width: 40vw;
-        transition: right 0.5s ease;
         right: 0;
     }
     .about-course{
