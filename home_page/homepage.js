@@ -1,6 +1,4 @@
-
-
-//Courses Style----------------------------------------------------------
+// hover/click event for courses section----------------------------------------------------------
 const courseBoxes = document.querySelectorAll('.course-box');
 const slideLeftBtn = document.querySelector('.course-btn-left');
 const slideRightBtn = document.querySelector('.course-btn-right');
@@ -8,20 +6,34 @@ const slideRightBtn = document.querySelector('.course-btn-right');
 function initDesktopCourses() {
     resetBoxWidths();
 
-    courseBoxes.forEach((box, index) => {
+    courseBoxes.forEach((box) => {
         const aboutCourse = box.querySelector('.about-course');
         aboutCourse.style.transition = 'transform 0.5s ease';
         aboutCourse.style.transform = 'translateY(80%)';
 
-        box.addEventListener('mouseenter', () => {
-            adjustBoxWidths(box);
-            aboutCourse.style.transform = 'translateY(0%)';
-        });
+        addHoverClickEvents(box, aboutCourse);
+    });
+}
 
-        box.addEventListener('mouseleave', () => {
+function addHoverClickEvents(box, aboutCourse) {
+    box.addEventListener('mouseenter', () => {
+        adjustBoxWidths(box);
+        aboutCourse.style.transform = 'translateY(0%)';
+    });
+
+    box.addEventListener('mouseleave', () => {
+        resetBoxWidths();
+        aboutCourse.style.transform = 'translateY(80%)';
+    });
+
+    box.addEventListener('click', () => {
+        if (aboutCourse.style.transform === 'translateY(0%)') {
             resetBoxWidths();
-            aboutCourse.style.transform = 'translateY(80%)';
-        });
+            aboutCourse.style.transform = 'translateY(80%)'; 
+        } else {
+            adjustBoxWidths(box);
+            aboutCourse.style.transform = 'translateY(0%)'; 
+        }
     });
 }
 
@@ -72,33 +84,39 @@ function initMobileCourses() {
 function handleResize() {
     if (window.innerWidth > 992) {
         initDesktopCourses();
-    } else if (window.innerWidth < 992 && window.innerWidth > 768) {
-       
-        initMobileCourses();
-    } else if (window.innerWidth < 768) {
+    } else {
         initMobileCourses();
     }
 }
 
-
 handleResize();
 window.addEventListener('resize', handleResize);
 
-
-//Life At KIC Style------------------------------------------------------------
+// //hover/click events for Life At KIC------------------------------------------------------------
 
 const eventBox = document.querySelectorAll('.life-img-cont');
-eventBox.forEach(box=>{
-    box.addEventListener('mouseenter',()=>{
-        const aboutBox = box.querySelector('.about-event');
+eventBox.forEach(box => {
+    const aboutBox = box.querySelector('.about-event');
+    aboutBox.style.transition = 'transform 0.5s ease';  
+
+    addHoverClickEvents(box, aboutBox);
+});
+
+
+function addHoverClickEvents(box, aboutBox) {
+    box.addEventListener('mouseenter', () => {
         aboutBox.style.transform = 'translateY(0%)';
-        aboutBox.style.transition = '0.5s ease';
-    })
-})
-eventBox.forEach(box=>{
-    box.addEventListener('mouseleave',()=>{
-        const aboutBox = box.querySelector('.about-event');
-        aboutBox.style.transform = 'translateY(100%)';
-        aboutBox.style.transition = '0.5s ease';
-    })
-})
+    });
+
+    box.addEventListener('mouseleave', () => {
+        aboutBox.style.transform = 'translateY(100%)';  
+    });
+
+    box.addEventListener('click', () => {
+        if (aboutBox.style.transform === 'translateY(0%)') {
+            aboutBox.style.transform = 'translateY(100%)';
+        } else {
+            aboutBox.style.transform = 'translateY(0%)';  
+        }
+    });
+}
