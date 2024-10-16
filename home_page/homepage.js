@@ -72,10 +72,10 @@ function initMobileCourses() {
 function handleResize() {
     if (window.innerWidth > 992) {
         initDesktopCourses();
-    } else if (window.innerWidth <= 992 && window.innerWidth > 768) {
+    } else if (window.innerWidth < 992 && window.innerWidth > 768) {
        
-        resetBoxWidths(); 
-    } else {
+        initMobileCourses();
+    } else if (window.innerWidth < 768) {
         initMobileCourses();
     }
 }

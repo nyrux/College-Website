@@ -1,5 +1,5 @@
 :root{
-    --headingFont : "Lilita One", sans-serif;
+    --headingFont : "Rowdies", sans-serif;
     --sectionMargin : 10vh;
     --descColor : #363636;
 }
@@ -100,7 +100,7 @@
 }
 .clg-name-cont{
     text-align: center;
-    font-size: 4em;
+    font-size: 3.5em;
     color: var(--secThemeColor);
     font-family: var(--headingFont);
 }
@@ -345,7 +345,7 @@
 }
 .life-top-row{
     height: 80vh;
-    width: 80%;
+    width: 85%;
     display: grid;
     grid-template-columns: 3fr 2fr;
     gap: 4vh;
@@ -419,12 +419,10 @@
 }
 .life-bottom-row{
     height: 65vh;
-    width: 100%;
-    padding: 2vh;
+    width: 85%;
     display: grid;
     grid-template-columns: 3fr 2fr;
     gap: 4vh;
-    padding: 0vh 10vh;
 }
 .life-img-2{
     background-image: url('iot_fest.jpg');
@@ -462,4 +460,79 @@
     margin-top: 5vh;
     width: 75%;
     text-align: justify;
+}
+
+@media(max-width:992px){
+    .life-wrapper{
+        margin-top: 25vh;
+    }
+    .life-top-row{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .life-top-row,.life-bottom-row{
+        width: 95%;
+    }
+    .life-title{
+        font-size: 3em;
+    }
+    .event-desc{
+        font-size: .8em;
+    }
+}
+@media(max-width:768px){
+    .life-top-row{
+        grid-template-columns: none;
+        grid-template-rows: 2fr 3fr;
+        height: 100vh;
+        padding: 0vh;
+    }
+    .life-title{
+        font-size: 1.75em;
+        padding: 0vh;
+    }
+    .life-desc{
+        font-size: .8em;
+    }
+    .life-bottom-row{
+        grid-template-columns: repeat(2,1fr);
+        height: 50vh;
+    }
+}
+@media(max-width:568px){
+    .life-bottom-row{
+        gap: 2vh;
+    }
+    .event-name{
+        font-size: 1em;
+        padding: 1vh;
+    }
+    .event-desc,.event-date{
+        font-size: .7em;
+    }
+    .life-wrapper{
+        row-gap: 3vh;
+    }
+    .event-name{
+        margin-top: 0vh;
+    }
+}
+@media(max-width:418px){
+    .event-name{
+        font-size: .85em;
+        font-weight: normal;
+        border-bottom: 2px solid var(--secThemeColor);
+    }
+    .event-name{
+        font-size: .7em;
+    }
+    .event-desc,.event-date{
+        font-size: .5em;
+    }
+    .life-bottom-row{
+        height: 30vh;
+    }
+    .event-desc{
+        margin-top: 1vh;
+        text-align: center;
+    }
 }
