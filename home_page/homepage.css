@@ -389,7 +389,7 @@
     height: 8vh;
     width: 8vh;
     border-radius: 50%;
-    background-color: #000;
+    background-color: rgb(0, 0, 0);
     color: #fff;
     display: flex;
     justify-content: center;
@@ -499,7 +499,7 @@
         height: 50vh;
     }
 }
-@media(max-width:568px){
+@media(max-width:576px){
     .life-bottom-row{
         gap: 2vh;
     }
@@ -515,6 +515,10 @@
     }
     .event-name{
         margin-top: 0vh;
+    }
+    .arrow-btn{
+        height: 6vh;
+        width: 6vh;
     }
 }
 @media(max-width:418px){
@@ -643,4 +647,51 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+@media(max-width:992px){
+    .sch-prog-cont{
+        flex-direction: column;
+    }
+    .sch-banner,.about-sch{
+        width: 80%;
+    }
+    .about-sch{
+        align-items: center;
+    }
+    .sch-prog-cont:nth-child(2){
+        flex-direction: column-reverse;
+    }
+}
+@media(max-width:576px){
+    .sch-title{
+        font-size: 2em;
+    }
+    .sch-desc{
+        font-size: .8em;
+    }
+    .sch-banner,.about-sch{
+        height: 40vh;
+    }
+    .sch-bnr-botm{
+        font-size: 2em !important;
+    }
+    .three-a{
+        font-size: 3em !important;
+    }
+    .sch-bnr-botm{
+        transform: translate(-5px,-10px) !important;
+    }
+    .sch-banner,.about-sch{
+        width: 100%;
+    }
+    .about-sch-desc{
+        font-size: .8em;
+    }
+    .kant-plus-2{
+        font-size: 1.5em !important;
+        margin-bottom: 1vh;
+    }
+    .kic-sch{
+        font-size: 2em !important;
+    }
 }
