@@ -1,3 +1,8 @@
+:root{
+    --headingFont : "Lilita One", sans-serif;
+    --sectionMargin : 10vh;
+    --descColor : #363636;
+}
 /* Landing section -----------------------------------------------------------*/
 .poster{
     height: 88vh;
@@ -17,13 +22,13 @@
     flex-direction: column;
 }
 .head-title-cont{
-    color: var(--textColor);
     font-size: 3em;
     font-weight: 700;
     padding: 2vh;
+    color: #fff;
 }
 .desc-paragraph-cont{
-    color: var(--textColor);
+    color: #fff;
     text-align: justify;
     width: 90%;
     font-size: .8em;
@@ -82,7 +87,7 @@
 }
 /* College intro section------------------------------------------------------------------------ */
 .clg-intro-cont{
-    margin-top: 10vh;
+    margin-top: var(--sectionMargin);
     height: fit-content;
     width: 100%;
     padding: 5vh 10vh;
@@ -95,9 +100,9 @@
 }
 .clg-name-cont{
     text-align: center;
-    font-size: 3em;
-    font-weight: 600;
+    font-size: 4em;
     color: var(--secThemeColor);
+    font-family: var(--headingFont);
 }
 .intro-paragraph-cont{
     display: flex;
@@ -109,7 +114,7 @@
     width: 70%;
     text-align: justify;
     padding: 4vh;
-    color: #3d3d3d;
+    color: var(--descColor);
 }
 .bold-clg-name{
     font-weight: 600;
@@ -174,7 +179,7 @@
 /* Courses Section------------------------------------------------------- */
 
 .course-intro{
-    margin-top: 6vh;
+    margin-top: var(--sectionMargin);
     height: fit-content;
     width: 100%;
     padding: 1vh;
@@ -184,16 +189,17 @@
     align-items: center;
 }
 .our-courses{
-    font-size: 3em;
-    font-weight: 600;
+    font-size: 5em;
     width: 100%;
     text-align: center;
-    color: #17ad23;
+    color: #29bd35;
+    font-family: var(--headingFont);
 }
 .course-p{
+    padding: 4vh;
     width: 60%;
     text-align: center;
-    color: rgb(49, 49, 49);
+    color: var(--descColor);
 }
 .course-box-wrapper {
     height: fit-content;
@@ -222,7 +228,7 @@
     width: 80%;
     height: 50vh; 
     padding-top: 3vh;
-    color: #3d3d3d;
+    color: var(--textColor);
     background-color: rgba(233, 255, 237, 0.822);
     position: absolute; 
     transform: translateY(80%); 
@@ -234,14 +240,15 @@
 }
 .course-name{
     font-weight: 500;
-    color: rgb(59, 59, 59);
+    color: var(--descColor);
     padding: 0vh 2vh;
-    border-bottom: 3px solid #17ad23;
+    border-bottom: 3px solid #1ec52c;
 }
 .course-desc{
     margin-top: 2vh;
     width: 80%;
     text-align: justify;
+    color: var(--descColor);
 }
 .course-btns{
     width: 100%;
@@ -321,4 +328,136 @@
     .course-box{
         width: 75vw;
     }
+}
+
+/* Life At KIC Section ------------------------------------------------- */
+
+.life-wrapper{
+    margin-top: var(--sectionMargin);
+    height: fit-content;
+    width: 100%;
+    padding: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 6vh;
+}
+.life-top-row{
+    height: 80vh;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 4vh;
+}
+.explore-cont,.life-img-cont{
+    height: 100%;
+    width: auto;
+}
+.explore-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.life-title{
+    height: fit-content;
+    width: 100%;
+    padding: 2vh;
+    color: #ff8009;
+    font-family: var(--headingFont);
+    font-size: 4em;
+    text-align: center;
+}
+.life-desc{
+    color: var(--descColor);
+    width: 80%;
+    text-align: justify;
+    padding: 2vh;
+}
+.view-btn-cont{
+    padding: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    font-weight: 500;
+}
+.view-btn{
+    border: none;
+    height: 8vh;
+    width: 8vh;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.view-btn:hover{
+    transform: translateX(20px);
+    transition: .25s ease;
+    cursor: pointer;
+}
+.life-img-cont{
+    background-position: center;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.life-img-cont:hover{
+    background-size: 120% 120%;
+    transition: .3s ease;
+}
+.life-img-1{
+    background-image: url('holi.jpg');
+}
+.life-bottom-row{
+    height: 65vh;
+    width: 100%;
+    padding: 2vh;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 4vh;
+    padding: 0vh 10vh;
+}
+.life-img-2{
+    background-image: url('iot_fest.jpg');
+}
+.life-img-3{
+    background-image: url('carnival.jpg');
+}
+.about-event{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.719);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transform: translateY(100%);
+}
+.event-name{
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 4vh;
+    font-size: 1.5em;
+}
+.event-date{
+    margin-top: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+.event-desc{
+    margin-top: 5vh;
+    width: 75%;
+    text-align: justify;
 }

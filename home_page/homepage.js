@@ -1,3 +1,6 @@
+
+
+//Courses Style----------------------------------------------------------
 const courseBoxes = document.querySelectorAll('.course-box');
 const slideLeftBtn = document.querySelector('.course-btn-left');
 const slideRightBtn = document.querySelector('.course-btn-right');
@@ -80,3 +83,22 @@ function handleResize() {
 
 handleResize();
 window.addEventListener('resize', handleResize);
+
+
+//Life At KIC Style------------------------------------------------------------
+
+const eventBox = document.querySelectorAll('.life-img-cont');
+eventBox.forEach(box=>{
+    box.addEventListener('mouseenter',()=>{
+        const aboutBox = box.querySelector('.about-event');
+        aboutBox.style.transform = 'translateY(0%)';
+        aboutBox.style.transition = '0.5s ease';
+    })
+})
+eventBox.forEach(box=>{
+    box.addEventListener('mouseleave',()=>{
+        const aboutBox = box.querySelector('.about-event');
+        aboutBox.style.transform = 'translateY(100%)';
+        aboutBox.style.transition = '0.5s ease';
+    })
+})
