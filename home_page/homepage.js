@@ -6,34 +6,20 @@ const slideRightBtn = document.querySelector('.course-btn-right');
 function initDesktopCourses() {
     resetBoxWidths();
 
-    courseBoxes.forEach((box) => {
+    courseBoxes.forEach((box, index) => {
         const aboutCourse = box.querySelector('.about-course');
         aboutCourse.style.transition = 'transform 0.5s ease';
         aboutCourse.style.transform = 'translateY(80%)';
 
-        addHoverClickEvents(box, aboutCourse);
-    });
-}
-
-function addHoverClickEvents(box, aboutCourse) {
-    box.addEventListener('mouseenter', () => {
-        adjustBoxWidths(box);
-        aboutCourse.style.transform = 'translateY(0%)';
-    });
-
-    box.addEventListener('mouseleave', () => {
-        resetBoxWidths();
-        aboutCourse.style.transform = 'translateY(80%)';
-    });
-
-    box.addEventListener('click', () => {
-        if (aboutCourse.style.transform === 'translateY(0%)') {
-            resetBoxWidths();
-            aboutCourse.style.transform = 'translateY(80%)'; 
-        } else {
+        box.addEventListener('mouseenter', () => {
             adjustBoxWidths(box);
-            aboutCourse.style.transform = 'translateY(0%)'; 
-        }
+            aboutCourse.style.transform = 'translateY(0%)';
+        });
+
+        box.addEventListener('mouseleave', () => {
+            resetBoxWidths();
+            aboutCourse.style.transform = 'translateY(80%)';
+        });
     });
 }
 
@@ -84,14 +70,17 @@ function initMobileCourses() {
 function handleResize() {
     if (window.innerWidth > 992) {
         initDesktopCourses();
+    } else if (window.innerWidth <= 992 && window.innerWidth > 768) {
+       
+        resetBoxWidths(); 
     } else {
         initMobileCourses();
     }
 }
 
+
 handleResize();
 window.addEventListener('resize', handleResize);
-
 // //hover/click events for Life At KIC------------------------------------------------------------
 
 const eventBox = document.querySelectorAll('.life-img-cont');
