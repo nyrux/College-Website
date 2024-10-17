@@ -1,16 +1,15 @@
 
 .apply-footer{
-    height: 50vh;
+    height: 60vh;
     width: 100vw;
     background-image: url('graduates_bg.jpg');
     background-position: center;
     background-size: 100% 100%;
-    margin-top: 10vh;
 }
 .blue-coloration{
-    height: 50vh;
+    height: 60vh;
     width: 100vw;
-    background-color: rgba(22, 68, 121, 0.795);
+    background-color: rgba(22, 68, 121, 0.774);
     display: flex;
     justify-content: center;
     align-items: center;

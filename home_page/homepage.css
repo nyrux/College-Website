@@ -4,6 +4,7 @@
     --descColor : #494949;
 }
 /* Landing section -----------------------------------------------------------*/
+
 .poster{
     height: 88vh;
     width: 100%;
@@ -50,6 +51,7 @@
         font-size: 2.5em;
     }
 }
+
 @media(max-width:768px){
     .poster{
         height: 70vh;
@@ -58,6 +60,7 @@
         font-size: 2em;
     }
 }
+
 @media(max-width:576px){
     .poster{
         height: 60vh;
@@ -141,6 +144,7 @@
         width: 90%;
     }
 }
+
 @media(max-width:992px){
     .clg-intro-cont{
         padding: 5vh 10vh;
@@ -153,6 +157,7 @@
         width: 100%;
     }
 }
+
 @media(max-width:768px){
     .clg-intro-cont{
         padding: 3vh;
@@ -648,6 +653,7 @@
     justify-content: center;
     align-items: center;
 }
+
 @media(max-width:992px){
     .sch-prog-cont{
         flex-direction: column;
@@ -662,6 +668,7 @@
         flex-direction: column-reverse;
     }
 }
+
 @media(max-width:576px){
     .sch-title{
         font-size: 2em;
@@ -749,6 +756,7 @@
     object-fit: cover;
     border-radius: 1vh;
 }
+
 @media(max-width:992px){
     .students-say-wrapper{
         grid-template-columns: none;
@@ -759,6 +767,7 @@
         height: fit-content;
     }
 }
+
 @media(max-width:768px){
     .std-say-title{
         font-size: 1.5em;
@@ -809,6 +818,7 @@
     font-weight: 700;
     color: #288853;
     font-family: var(--headingFont);
+    padding-bottom: 7vh;
 }
 
 /* Slider */
@@ -881,7 +891,7 @@
     width: 100%;
     display: flex;
     justify-content:center;
-    transform: translateY(-200px);
+    transform: translateY(-190px);
 }
 .success-slide-btns-cont{
     height: 25vh;
@@ -928,6 +938,7 @@
         font-size: .9em;
     }
 }
+
 @media(max-width:768px){
     .success-slide{
         grid-template-columns: none;
@@ -950,6 +961,7 @@
         padding-bottom: 4vh;
     }
 }
+
 @media(max-width:576px){
     .success-slide-btns-cont{
         transform: translateX(150px);
@@ -960,7 +972,7 @@
         font-size: 1.75em;
     }
     .success-slide-btns-wrap{
-        transform: translateY(-210px);
+        transform: translateY(-220px);
     }
     .about-std{
         font-size: 1em;
@@ -974,10 +986,16 @@
         height: 80vh;
     }
     .success-desc-cont,.success-desc{
-        font-size: .75em;
+        font-size: .8em;
         height: 28vh;
     }
     .success-img{
         height: 35vh;
     }
+}
+.summary-wrapper{
+    height: fit-content;
+    width: 100%;
+    padding: 2vh;
+    background-color: #523e22;
 }

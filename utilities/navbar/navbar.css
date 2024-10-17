@@ -24,9 +24,10 @@ body{
     width: 100vw;
     display: grid;
     grid-template-columns: 2fr 5fr 3fr;
-    background-color: var(--primThemeColor);
-    box-shadow: 0px 0px 5px 0px black;
+    background-color: #333333af;
     z-index: 10;
+    position: fixed;
+    backdrop-filter: blur(5px);
 }
 .nav-item-cont{
     height: auto;
