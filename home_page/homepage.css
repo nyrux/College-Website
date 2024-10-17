@@ -694,4 +694,98 @@
     .kic-sch{
         font-size: 2em !important;
     }
+    .sch-desc{
+        width: 90%;
+    }
+    .about-sch-desc{
+        width: 100%;
+    }
+}
+
+/* Students Say Section -------------------------------------------------------------- */
+
+.students-say-wrapper{
+    margin-top: var(--sectionMargin);
+    height: fit-content;
+    width: 100%;
+    padding: 2vh;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 2vh;
+}
+.student-say-desc{
+    height: 70vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.std-say-title{
+    color: #e5575c;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+.std-say-desc{
+    width: 70%;
+    padding: 2vh;
+    text-align: justify;
+    color: var(--descColor);
+}
+.student-say-vdo {
+    display: flex;
+    height: 70vh;
+    width: auto;
+    gap: 4vh;
+}
+.std-vdo-cont{
+    transition: width .5s ease;
+    border-radius: 2vh;
+}
+.std-vdo{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+@media(max-width:992px){
+    .students-say-wrapper{
+        grid-template-columns: none;
+        grid-template-rows: repeat(2,1fr);
+        height: 100vh;
+    }
+    .student-say-desc{
+        height: fit-content;
+    }
+}
+@media(max-width:768px){
+    .std-say-title{
+        font-size: 1.5em;
+    }
+    .std-say-desc{
+        font-size: .8em;
+    }
+    .std-vdo{
+        height: 60vh;
+    }
+    .std-vdo-cont{
+        height: fit-content;
+    }
+    .student-say-vdo{
+        height: fit-content;
+    }
+    .students-say-wrapper{
+        height: 90vh;
+    }
+}
+@media(max-width:576px){
+    .std-vdo{
+        height: 35vh;
+    }
+    .students-say-wrapper{
+        height: 60vh;
+        margin-top: 5vh;
+    }
+    .std-say-desc{
+        width: 100%;
+    }
 }

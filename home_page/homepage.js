@@ -109,3 +109,48 @@ function addHoverClickEvents(box, aboutBox) {
         }
     });
 }
+
+/* Student say video ------------------------- */
+const divs = document.querySelectorAll('.std-vdo-cont');
+
+divs[0].style.width = '60%';
+divs[1].style.width = '20%';
+divs[2].style.width = '20%';
+
+divs.forEach(div => {
+    div.addEventListener('mouseenter', () => {
+        divs.forEach(d => {
+            d.style.width = '20%';
+        });
+        div.style.width = '60%';
+    });
+
+    div.addEventListener('mouseleave', () => {
+        divs[0].style.width = '60%'; 
+        divs[1].style.width = '20%'; 
+        divs[2].style.width = '20%'; 
+    });
+});
+
+const stdVideos = document.querySelectorAll('.std-vdo');
+
+stdVideos.forEach(video => {
+    const playVideo = () => {
+        video.play();
+    };
+
+    const pauseVideo = () => {
+        video.pause();
+        video.currentTime = 0; 
+    };
+
+    video.addEventListener('mouseenter', playVideo);
+    video.addEventListener('mouseleave', pauseVideo);
+    video.addEventListener('click', () => {
+        if (video.paused) {
+            playVideo(); 
+        } else {
+            pauseVideo(); 
+        }
+    });
+});
