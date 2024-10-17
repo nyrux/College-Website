@@ -110,7 +110,7 @@ function addHoverClickEvents(box, aboutBox) {
     });
 }
 
-/* Student say video ------------------------- */
+/* hover/click events for students section ------------------------- */
 const divs = document.querySelectorAll('.std-vdo-cont');
 
 divs[0].style.width = '60%';
@@ -154,3 +154,38 @@ stdVideos.forEach(video => {
         }
     });
 });
+
+
+/* Success Stories Image slier ---------------------------------------- */
+const successSlides = document.querySelectorAll('.success-slide');
+const successLeftBtn = document.querySelector('.success-slide-btn-left');
+const successRightBtn = document.querySelector('.success-slide-btn-right');
+
+let currentIndex = 0;
+
+const updateSlides = () => {
+    const offset = -currentIndex * 80;
+    successSlides.forEach(slide => {
+        slide.style.transform = `translateX(${offset}vw)`;
+    });
+    successLeftBtn.disabled = currentIndex === 0;
+    successRightBtn.disabled = currentIndex === successSlides.length - 1;
+};
+
+successRightBtn.addEventListener('click', () => {
+    currentIndex++;
+    if (currentIndex >= successSlides.length) {
+        currentIndex = 0;
+    }
+    updateSlides();
+});
+
+successLeftBtn.addEventListener('click', () => {
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = successSlides.length - 1;
+    }
+    updateSlides();
+});
+
+updateSlides();
