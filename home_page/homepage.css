@@ -4,7 +4,16 @@
     --descColor : #494949;
 }
 /* Landing section -----------------------------------------------------------*/
-
+@keyframes fadeIn {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+       transform: translateX(0px);
+       opacity: 1;
+    }
+}
 .poster{
     height: 88vh;
     width: 100%;
@@ -23,17 +32,44 @@
     flex-direction: column;
 }
 .head-title-cont{
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 700;
-    padding: 2vh;
+    padding: 4vh;
     color: #fff;
+    animation: fadeIn 1s  forwards;
 }
-.desc-paragraph-cont{
+.desc-btn-cont{
     color: #fff;
-    text-align: justify;
+    display: flex;
+    justify-content: center;
     width: 90%;
     font-size: .8em;
     padding: 2vh;
+    opacity: 0;
+    animation: fadeIn 1s .35s forwards;
+}
+.poster .enroll-btn{
+    color: var(--secThemeColor);
+    background: #fff;
+    height: 8vh;
+    width: 30vh;
+    border-radius: 5px;
+    font-size: 1.15em;
+    font-weight: 500;
+}
+@media(max-width:768px){
+    .poster .enroll-btn{
+        width: 20vh;
+        height: 6vh;
+        font-size: .9em;
+    }
+}
+.poster .enroll-btn:hover{
+    background: var(--secThemeColor);
+    color: #fff;
+    transform: scale(1.1,1.1);
+    transition: .25s ease;
+    cursor: pointer;
 }
 .std-img-cont{
     background-image: url('student.jpg');
