@@ -3,6 +3,11 @@
     --sectionMargin : 10vh;
     --descColor : #494949;
 }
+@media(max-width:768px){
+    :root{
+        --sectionMargin : 5vh;
+    }
+}
 /* Landing section -----------------------------------------------------------*/
 @keyframes fadeIn {
     from {

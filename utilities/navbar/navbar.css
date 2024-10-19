@@ -4,7 +4,10 @@
     font-family: 'Poppins';
     list-style-type: none;
     text-decoration: none;
-    box-sizing: border-box;
+    box-sizing: border-box;  
+    --headingFont : "Rowdies", sans-serif;
+    --sectionMargin : 10vh;
+    --descColor : #494949;
 }
 body{
     overflow-x: hidden;
