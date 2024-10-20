@@ -412,3 +412,113 @@
         padding: 0vh;
     }
 }
+
+/* Why KIC Section ------------------------------------------------------------ */
+
+.why-kic-wrapper{
+    margin-top: 6vh;
+    height: fit-content;
+    width: 100%;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.why-title{
+    font-size: 3em;
+    font-weight: 600;
+    color: #424242;
+}
+.why-item{
+    height: fit-content;
+    width: 80%;
+    padding: 2vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2vh;
+}
+.why-desc-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+    gap: 2vh;
+}
+.why-img-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue;
+    height: 60vh;
+    display: flex;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.why-img-1{
+    background-image: url('');
+}
+.why-img-2{
+    background-image: url('');
+}
+.why-img-3{
+    background-image: url('');
+}
+.why-img-4{
+    background-image: url('');
+}
+.why-item-title{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: rgb(71, 71, 71);
+}
+.why-desc{
+    text-align: justify;
+    font-size: .9em;
+    color: var(--descColor);
+}
+@media(max-width:992px){
+    .why-kic-wrapper{
+        gap: 3vh;
+    }
+    .why-title{
+        font-size: 2em;
+    }
+    .why-item{
+        width: 90%;
+    }
+    .why-img-cont{
+        height: 50vh;
+    }
+    .why-item-title{
+        font-size: 1.15em;
+    }
+    .why-desc{
+        font-size: .9em;
+    }
+}
+@media(max-width:768px){
+    .why-item{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .why-desc{
+        padding-bottom: 5vh;
+    }
+    .why-item:nth-child(even){
+        flex-direction: column;
+    }
+    .why-img-cont{
+        height: 40vh;
+    }
+    .why-item{
+        padding: 0vh;
+    }
+    .why-desc-cont{
+        padding: 0vh;
+    }
+    .why-desc{
+        font-size: .8em;
+    }
+}
