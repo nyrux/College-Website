@@ -424,11 +424,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 5vh;
 }
 .why-title{
     font-size: 3em;
     font-weight: 600;
     color: #424242;
+    padding: 2vh 0vh;
 }
 .why-item{
     height: fit-content;
@@ -450,28 +452,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid blue;
     height: 60vh;
     display: flex;
     background-position: center;
     background-size: 100% 100%;
 }
-.why-img-1{
-    background-image: url('');
-}
-.why-img-2{
-    background-image: url('');
-}
-.why-img-3{
-    background-image: url('');
-}
-.why-img-4{
-    background-image: url('');
+.why-image{
+    height: 100%;
+    width: 100%;
 }
 .why-item-title{
     font-size: 1.5em;
     font-weight: 500;
     color: rgb(71, 71, 71);
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 2px;
 }
 .why-desc{
     text-align: justify;
