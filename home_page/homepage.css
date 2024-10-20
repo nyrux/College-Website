@@ -54,10 +54,10 @@
     animation: fadeIn 1s .35s forwards;
 }
 .poster .enroll-btn{
-    color: var(--secThemeColor);
-    background: #fff;
-    height: 8vh;
-    width: 30vh;
+    background: var(--secThemeColor);
+    color: #fff;
+    height: 7vh;
+    width: 28vh;
     border-radius: 5px;
     font-size: 1.15em;
     font-weight: 500;
@@ -70,8 +70,8 @@
     }
 }
 .poster .enroll-btn:hover{
-    background: var(--secThemeColor);
-    color: #fff;
+    color: var(--secThemeColor);
+    background-color: #fff;
     transform: scale(1.1,1.1);
     transition: .25s ease;
     cursor: pointer;

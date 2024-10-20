@@ -1,5 +1,6 @@
 
 .apply-footer{
+    margin-top: 10vh;
     height: 60vh;
     width: 100vw;
     background-image: url('graduates_bg.jpg');
@@ -172,5 +173,11 @@
     }
     .fa-bars{
         margin-right: 2vh;
+    }
+    .start-text{
+        font-size: 1.25em;
+    }
+    .apply-footer{
+        height: 50vh;
     }
 }

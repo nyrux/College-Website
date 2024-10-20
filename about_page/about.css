@@ -1,4 +1,8 @@
-
+:root{
+    --commitIconColor : #1061ac;
+    --commitTitleColor : #135492;
+    --commitBgColor : #ebf0f3;
+}
 /* Poster */
 .advert-cont{
     display: flex;
@@ -115,255 +119,296 @@
     }
 }
 
-/* Why us section */
-.why-kantipur{
-    width: 100%;
-    height: fit-content;
-    background-color: rgb(250, 250, 250);
-}
-.why-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 6vh;
-}
-.why-qsn{
-    font-size: 3em;
-    font-weight: 500;
-    color: var(--secThemeColor);
-}
-.why-ans{
-    color: #4e4e4e;
-    width: 60%;
-    text-align: justify;
-}
-.why-ans,.why-qsn{
-    padding: 2vh;
-}
-.why-item{
-    height: 60vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(250, 250, 250);
-}
-.why-item:nth-child(odd){
-    flex-direction: row-reverse;
-}
-.why-image-cont,.why-paragraph-cont{
-    height: auto;
-    width: 100%;
-}
-.why-paragraph-cont{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.why-image-cont{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60vh;
-}
-.why-img{
-    height: 80%;
-    width: 75%;
-    background-position: center;
-    background-size: 100% 100%;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px rgb(172, 172, 172);
-}
-.why-img-1{
-    background-image: url('decade_exp.jpeg');
-}
-.why-img-2{
-    background-image: url('extra_acts.png');
-    box-shadow: none;
-    height: 90%;
-    
-}
-.why-img-3{
-    background-image: url('dedicated-teahers.jpg');
-}
-.why-img-4{
-    background-image: url('scholarship.jpeg');
-}
-.why-us-title-cont{
-    height: 10vh;
-    width: 70%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 2px solid #797878;
-}
-.numbering{
-    height: 6vh;
-    width: 6vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--secThemeColor);
-    margin-right: 6vh;
-    font-weight: 600;
-}
-.title{
-    color: var(--secThemeColor);
-    font-size: 1.75em;
-    font-weight: 600;
-}
-.why-content{
-    color: #4e4e4e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: fit-content;
-    padding: 2vh;
-}
-.why-content p{
-    width: 80%;
-    font-size: .9em;
-    text-align: justify;
-}
-/* Why us responsive */
-@media(max-width:992px){
-    .why-qsn{
-        font-size: 2.5em;
-    }
-    .title{
-        font-size: 1.35em;
-    }
-    .why-content{
-        font-size: .85em;
-    }
-    .why-image-cont{
-        height: 50vh;
-    }
-}
-@media(max-width:768px){
-    .why-img{
-        height: 90%;
-        width: 60%;
-    }
-    .why-qsn{
-        font-size: 2em;
-    }
-    .why-ans{
-        width: 85%;
-    }
-    .why-item{
-        flex-direction: column;
-    }
-    .numbering{
-        margin-right: 1vh;
-    }
-    .why-image-cont{
-        height: 65vh;
-    }
-    .why-item:nth-child(odd){
-        flex-direction: column;
-    }
-    .why-qsn{
-        font-size: 1.5em;
-    }
-}
-@media(max-width:576px){
-    .why-img{
-        width: 80%;
-    }
-    .why-qsn{
-        font-size: 1.5em;
-    }
-}
+/* Commitments Section--------------------------------------------------- */
 
-/* Message from section */
-.msg-from-cont{
-    height: 160vh;
+.commitments-wrapper{
+    height: fit-content;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 4vh;
-    gap: 1vh;
-    background-color: rgb(243, 243, 243);
-}
-.from-chairman-cont,.from-principal-cont{
-    height: 80vh;
-    width: 60%;
+    padding: 10vh;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    padding: 1vh;
+    gap: 10vh;
 }
-.chairman-img-cont,.principal-img-cont{
-    height: auto;
+.commitment-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
     width: auto;
+    background-color: var(--commitBgColor);
+    gap: 5vh;
+}
+.commit-icon-cont{
+    height: 15vh;
+    width: 15vh;
+    border-radius: 50%;
+    background-color: var(--commitIconColor);
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.5em;
 }
-.chairman-text,.principal-text{
-    height: auto;
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-
+.commit-title{
+    font-size: 1.75em;
+    color: var(--commitTitleColor);
+    font-weight: 500;
 }
-.chairman-img,.principal-img{
-    height: 60vh;
-}
-.msg-from-title{
-    color: rgb(59, 59, 59);
-    font-size: 1.25em;
-    text-align: center;
-    border-bottom: 2px solid var(--secThemeColor);
-}
-.msg{
-    color: rgb(49, 49, 49);
-    font-size: .9em;
+.commit-desc{
+    width: 70%;
     text-align: justify;
+    color: var(--descColor);
+    font-size: .9em;
 }
-/* Message from responsive */
 @media(max-width:992px){
-    .from-chairman-cont,.from-principal-cont{
-        width: 80%;
+    .commitments-wrapper{
+        padding: 6vh;
+        gap: 6vh;
+    }
+    .commit-icon-cont{
+        height: 10vh;
+        width: 10vh;
+        font-size: 1.15em;
+    }
+    .commit-title{
+        font-size: 1.25em;
+    }
+    .commit-desc{
+        font-size: .8em;
     }
 }
-
 @media(max-width:768px){
-    .from-chairman-cont,.from-principal-cont{
-        width: 100%;
+    .commitments-wrapper{
+        padding: 2vh;
+        gap: 2vh;
+    }
+    .commitment-cont{
+        height: 45vh;
+    }
+    .commit-icon-cont{
+        height: 8vh;
+        width: 8vh;
+    }
+    .commit-desc{
+        width: 85%;
+        font-size: .7em;
     }
 }
 @media(max-width:576px){
-    .from-chairman-cont,.from-principal-cont{
+    .commitments-wrapper{
         grid-template-columns: none;
         grid-template-rows: repeat(2,1fr);
     }
-    .from-principal-cont{
+}
+
+/* Values Section -------------------------------------------------------------------------------- */
+.values-wrapper{
+    width: 100%;
+    height: fit-content;
+    padding: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vh;
+}
+.value-head-icon{
+    height: 15vh;
+    width: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    background-color:var(--commitIconColor);
+    color: #fff;
+    font-size: 2em;
+}
+.value-header{
+    color: var(--commitTitleColor);
+    font-size: 2em;
+    font-weight: 500;
+}
+.values-container{
+    background-color: var(--commitBgColor);
+    width: 85%;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    padding: 2vh;
+    gap: 2vh;
+}
+.value{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4vh;
+}
+.value-title{
+    color: var(--commitTitleColor);
+    font-size: 1.25em;
+    font-weight: 400;
+}
+.value-desc{
+    text-align: justify;
+    width: 70%;
+    color: var(--descColor);
+    font-size: .9em;
+}
+@media(max-width:768px){
+    .values-container{
+        height: fit-content;
+        grid-template-columns: none;
+        grid-template-rows: repeat(4,1fr);
+        width: 90%;
+        gap: 5vh;
+    }
+    .value-head-icon{
+        height: 10vh;
+        width: 10vh;
+        font-size: 1.25em;
+    }
+    .value-header{
+        font-size: 1.5em;
+    }
+    .value-title{
+        font-size: 1em;
+        font-weight: 500;
+    }
+    .value-desc{
+        font-size: .8em;
+    }
+}
+
+
+/* Chairman CEO Section------------------------------------------------------------------------ */
+
+.chairman-ceo{
+    margin-top: 10vh;
+    height: fit-content;
+    width: 100%;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+}
+.person-cont{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 2vh;
+    width: 80%;
+    height: fit-content;
+    gap: 4vh;
+}
+.person-img-cont,.speech-cont{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+.speech-title{
+    color: #474747;
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+}
+.person-name{
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #474747;
+}
+.speech-desc{
+    color: var(--descColor);
+    text-align: justify;
+    font-size: .9em;
+}
+.person-img-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chairman-bg{
+    background-color: #46a0a0;
+    height: 90%;
+    width: 90%;
+}
+.ceo-bg{
+    background-color: #52a7e0;
+    height: 90%;
+    width: 90%;
+}
+.person-img{
+    background-position: center;
+    background-size: 100% 100%;
+    height: 110%;
+    width: 95%;
+    transform: translateY(-9%);
+}
+.chairman-img{
+    background-image: url('https://iic.edu.np/image/about-us/chairman.png');
+}
+.ceo-img{
+    background-image: url('https://iic.edu.np/image/about-us/ceo.png');
+}
+@media(max-width:1200px){
+    .person-cont{
+        width: 90%;
+    }
+}
+@media(max-width:992px){
+    .person-cont{
+        width: 100%;
+    }
+    .ceo-bg,.chairman-bg{
+        width: 100%;
+    }
+    .speech-title{
+        font-size: 1.5em;
+    }
+}
+@media(max-width:768px){
+    .person-cont{
         display: flex;
         flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
     }
-    .chairman-img,.principal-img{
-        height: 40vh;
+    .person-cont:nth-child(2){
+        flex-direction: column;
     }
-    .msg-from-title{
-        margin-top: 2vh;
+    .person-img-cont{
+        width: 60%;
     }
-    .msg{
-        margin-top: 5vh;
+    .speech-cont{
+        height: fit-content;
+    }
+    .speech-desc{
+        width: 70%;
     }
 }
-
-/* Scroll Visibility Animation */
-.why-kantipur *, .welcome-wrapper *, .msg-from-cont *{
-    opacity: 0; 
-    transition: opacity 0.25s ease-in; 
-}
-
-.visible {
-    opacity: 1;
+@media(max-width:576px){
+    .person-img-cont{
+        height: 50vh;
+        width: 90%;
+    }
+    .speech-desc{
+        width: 100%;
+        font-size: .8em;
+    }
+    .speech-title{
+        font-size: 1.15em;
+    }
+    .chairman-ceo{
+        padding: 0vh;
+    }
 }
