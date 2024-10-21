@@ -147,6 +147,7 @@
     font-size: 3.5em;
     color: var(--secThemeColor);
     font-family: var(--headingFont);
+    padding-top: 4vh;
 }
 .intro-paragraph-cont{
     display: flex;
@@ -224,158 +225,126 @@
 }
 /* Courses Section------------------------------------------------------- */
 
-.course-intro{
+.courses-wrapper{
     margin-top: var(--sectionMargin);
     height: fit-content;
     width: 100%;
-    padding: 1vh;
+    padding: 2vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
-.our-courses{
-    font-size: 5em;
-    width: 100%;
-    text-align: center;
-    color: #29bd35;
+.course-title-cont{
+    font-size: 4em;
+    font-weight: 600;
     font-family: var(--headingFont);
-}
-.course-p{
-    padding: 4vh;
-    width: 60%;
     text-align: center;
-    color: var(--descColor);
+    color: rgb(16, 179, 24);
 }
-.course-box-wrapper {
+.course-box-cont{
     height: fit-content;
-    width: fit-content;
-    padding: 4vh 8vh;
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
+    width: 80%;
+    padding: 2vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 4vh;
 }
-
-.course-box {
+.course-box{
     height: 60vh;
     width: auto;
+    background-position: center;
+    background-size: 100% 100%;
     display: flex;
-    justify-content: center;
     align-items: flex-end;
-    overflow: hidden;
-    position: relative; 
+    justify-content: center;
 }
-.course-img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+.courses-wrapper 
+.course-box-cont 
+.course-box:nth-child(1)
+{
+    background-image: url('https://www.padmashreecollege.edu.np/storage/programs/1693385252bit.webp');
 }
-.about-course {
+.courses-wrapper 
+.course-box-cont 
+.course-box:nth-child(2)
+{
+    background-image: url('https://nobelcollege.edu.np/DynamicResources/Images/science-lab-1.jpg');
+}
+.courses-wrapper 
+.course-box-cont 
+.course-box:nth-child(3)
+{
+    background-image: url('https://skillcampusnepal.com/wp-content/uploads/2022/10/2-small.jpg');
+}
+.courses-wrapper 
+.course-box-cont 
+.course-box:nth-child(4)
+{
+    background-image: url('https://www.cihhm.com/wp-content/uploads/2023/12/WhatsApp-Image-2023-12-27-at-10.58.31-AM-1024x774.jpeg');
+}
+.course-desc-cont{
+    height: 15vh;
     width: 80%;
-    height: 50vh; 
-    padding-top: 3vh;
-    color: var(--textColor);
-    background-color: rgba(233, 255, 237, 0.822);
-    position: absolute; 
-    transform: translateY(80%); 
-    transition: transform 0.5s ease;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;   
-}
-.course-name{
-    font-weight: 500;
-    color: var(--descColor);
-    padding: 0vh 2vh;
-    border-bottom: 3px solid #1ec52c;
-}
-.course-desc{
-    margin-top: 2vh;
-    width: 80%;
-    text-align: justify;
-    color: var(--descColor);
-}
-.course-btns{
-    width: 100%;
+    background-color: rgba(12, 141, 29, 0.747);
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 4vh;
+    flex-direction: column;
+    gap: 2vh;
+}
+.course-title{
+    font-size: 1.15em;
+    font-weight: 600;
+}
+.course-btn-cont{
+    display: flex; 
+    flex-direction: row;
     gap: 4vh;
 }
 .enroll-btn,.more-btn{
-    border: none;
-    color: #17ad23;
+    color: #fff;
     background-color: rgba(255, 255, 255, 0);
-}
-.fa-angle-right{
-    margin-left: 1vh;
+    border: none;
 }
 .enroll-btn:hover,.more-btn:hover{
-    transform: translateX(20px);
+    transform: translateX(15px);
     transition: .25s ease;
     cursor: pointer;
-    color: #21ec32;
-}
-.slide-btns-cont{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0vh 1vh;
-    transform: translateY(-220px);
-    display: none;
-}
-.slide-btn{
-    padding: 1vh 2vh;    
-    color: #fff;
-    background-color: rgb(27, 167, 57);
-    cursor: pointer;
-}
-.slide-btn:hover{
-    background-color: #21ec32;
-    transition: .25s ease;
 }
 @media(max-width:992px){
-    .our-courses{
-        font-size: 2.25em;
+    .course-box-cont{
+        width: 100%;
     }
-    .course-p{
-        width: 80%;
-        font-size: .9em;
-    }
-    .course-box-wrapper{
-        overflow-x: visible;
+}
+@media(max-width:768px){
+    .course-title-cont{
+        font-size: 2em;
     }
     .course-box{
-        overflow: visible;
-        width: 40vw;
-        right: 0;
-    }
-    .about-course{
-        top: 40px;
-        font-size: .8em;
-        justify-content: center;
         height: 45vh;
-        gap: 4vh;
     }
-    .course-desc{
-        margin-top: 0vh;
+    .course-desc-cont{
+        height: 10vh;
+    }
+    .course-title{
+        font-size: 1em;
     }
     .enroll-btn,.more-btn{
+        font-size: .7em;
+    }
+}
+@media(max-width:576px){
+    .course-box-cont{
+        grid-template-columns: none;
+        grid-template-rows: repeat(4,1fr);
+    }
+    .course-title{
         font-size: .9em;
     }
-    .slide-btns-cont{
-        display: flex;
-    }
 }
-
-@media(max-width:768px){
-    .course-box{
-        width: 75vw;
-    }
-}
-
 /* Life At KIC Section ------------------------------------------------- */
 
 .life-wrapper{
@@ -510,9 +479,6 @@
 }
 
 @media(max-width:992px){
-    .life-wrapper{
-        margin-top: 25vh;
-    }
     .life-top-row{
         grid-template-columns: repeat(2,1fr);
     }
