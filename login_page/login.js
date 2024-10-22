@@ -14,7 +14,6 @@ loginLink.addEventListener('click',()=>{
     signupTab.style.display = 'none';
 })
 
-
 $(document).ready(function(){
     $('.toast').hide();
     $('#login').submit(function(event){
