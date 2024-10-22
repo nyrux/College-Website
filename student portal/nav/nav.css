@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+
+}
+nav{
+    height: fit-content;
+    width: 100%;
+    padding: 2vh 5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(7, 46, 97);
+    color: #fff;
+    box-shadow: 0px 0px 10px 0px grey;
+}
+.logo-cont{
+    border: 1px solid none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.clg-logo{
+    height: 12vh;
+    width: 12vh;
+}
+.logo-name{
+    margin-left: 2vh;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.links-cont{
+    display: flex;
+    flex-direction: row;
+    gap: 10vh;
+}
+.nav-link{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+    text-decoration-color: rgba(255, 255, 255, 0);
+}
+.nav-link:hover{
+    transform: scale(1.1,1.1);
+    text-decoration-color: rgb(255, 255, 255);
+    transition: .25s ease;
+    cursor: pointer;
+}
+@media(max-width:768px){
+    .clg-logo{
+        height: 10vh;
+        width: 10vh;
+    }
+    .logo-name{
+        font-size: 1.25em;
+    }
+    .nav-link{
+        font-size: .8em;
+    }
+}
+@media(max-width:576px){
+    nav{
+        padding: 1vh 5vh;
+        justify-content: space-between;
+    }
+    .logo-name{
+        display: none;
+    }
+    .clg-logo{
+        height: 9vh;
+        width: 9vh;
+    }
+    .links-cont{
+        gap: 3vh;
+    }
+}
+
