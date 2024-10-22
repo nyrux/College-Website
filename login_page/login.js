@@ -14,3 +14,58 @@ loginLink.addEventListener('click',()=>{
     signupTab.style.display = 'none';
 })
 
+
+$(document).ready(function(){
+    $('.toast').hide();
+    $('#login').submit(function(event){
+        event.preventDefault();
+        $.ajax({
+            url:'login.php',
+            type:'POST',
+            data:{
+                username:$('#username').val(),
+                password:$('#password').val()
+            },
+            success:function(response){
+                if(response === "success"){
+                    location.href = "../home_page/home.html";
+                }else{
+                    $('.toast-body').html(response);
+                    $('.toast').show();
+                    setTimeout(function() {
+                        $('.toast').hide();
+                    }, 5000);
+                }
+            },
+            error:function(xhs,status,error){
+                console.log(error);
+            }
+        })
+    })
+    $('#signup').submit(function(event){
+        event.preventDefault();
+        $.ajax({
+            url:'signup.php',
+            type:'POST',
+            data:{
+                username:$('#userName-signup').val(),
+                password:$('#password-signup').val(),
+                email:$('#email-signup').val()
+            },
+            success:function(response){
+                if(response === "success"){
+                    location.href = "../home_page/home.html";
+                }else{
+                    $('.toast-body').html(response);
+                    $('.toast').show();
+                    setTimeout(function() {
+                        $('.toast').hide();
+                    }, 5000);
+                }
+            },
+            error:function(xhs,status,error){
+                console.log(error);
+            }
+        })
+    })
+});
