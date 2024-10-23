@@ -1,10 +1,31 @@
+
 table{
     border-collapse: collapse;
     border: 1px solid grey;
+    width: 90%;
+}
+th{
+    font-weight: 500;
 }
 th,td{
-    padding: 2vh;
-    font-size: .8em;
+    font-size: .7em;
     border: 1px solid grey;
     text-align: center;
+}
+@media(max-width:768px){
+    body{
+        overflow-x: scroll;
+    }
+    table{
+        width: 99%;
+    }
+    th,td{
+        font-size: .5em;
+    }
+}
+@media(max-width:480px){
+    th,td{
+        font-size: .4em;
+        font-weight: normal;
+    }
 }

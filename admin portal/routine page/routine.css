@@ -1,0 +1,61 @@
+
+table{
+    border-collapse: collapse;
+    border: 1px solid grey;
+    width: 90%;
+}
+th{
+    font-weight: 500;
+}
+th,td{
+    font-size: .7em;
+    border: 1px solid grey;
+    text-align: center;
+}
+input{
+    width: 100%;
+    outline: none;
+    border: none;
+}
+@media(max-width:768px){
+    body{
+        overflow-x: scroll;
+    }
+    table{
+        width: 99%;
+    }
+    th,td{
+        font-size: .5em;
+    }
+}
+@media(max-width:480px){
+    th,td{
+        font-size: .4em;
+        font-weight: normal;
+    }
+}
+.config-btns-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4vh;
+}
+.config-btn{
+    height: 5vh;
+    width: 15vh;
+    border: none;
+    font-size: .6em;
+    color: #fff;
+    cursor: pointer;
+}
+.config-btn:hover{
+    transform: scale(1.1,1.1);
+    transition: .25s ease;
+}
+.config-btns-cont .config-btn:nth-child(1){
+    background-color: rgb(11, 138, 28);
+}
+.config-btns-cont .config-btn:nth-child(2){
+    background-color: rgb(65, 65, 65);
+}
