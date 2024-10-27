@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div class="admin-container">
+    <h1>Admission Submissions</h1>
+    <table id="submissionTable">
+        <thead>
+            <tr>
+                <th>S.N</th>
+                <th>Image</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Province</th>
+                <th>Course</th>
+                <th>dob</th>
+                <th>grade</th>
+                <th>submitted_at</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="submissionBody">
+            <!-- Data will be loaded here via AJAX -->
+        </tbody>
+    </table>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

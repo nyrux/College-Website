@@ -1,0 +1,81 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.admin-container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.signup-input-cont {
+    margin-bottom: 20px;
+}
+
+.signup-input-box,
+.create-acc-btn,
+.accept-btn,
+.decline-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.create-acc-btn {
+    background-color: #34aeff;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.create-acc-btn:hover {
+    background-color: #2998d3;
+}
+
+.accept-btn {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.decline-btn {
+    background-color: #f44336;
+    color: white;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
