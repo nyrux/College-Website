@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- Nav -->
+    <link rel="stylesheet" href="../nav/nav.css">
     <title>Admin Panel</title>
     <!-- Poppins Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,12 +25,11 @@
                 <span><i class="fa-solid fa-x"></i></span>
             </div>
             <div class="nav-btns-cont">
-                <div class="nav-btn"><i class="fa-solid fa-house"></i><span>Home</span></div>
-                <div class="nav-btn"><i class="fa-solid fa-id-card-clip"></i><span>Admission Requests</span></div>
-                <div class="nav-btn"><i class="fa-solid fa-user-tie"></i><span>User Verification</span></div>
-                <div class="nav-btn"><i class="fa-solid fa-clipboard-list"></i><span>Manage Routine</span></div>
-                <div class="nav-btn"><i class="fa-solid fa-newspaper"></i><span>Manage Results</span></div>
-                <div class="nav-btn"><i class="fa-solid fa-list-check"></i><span>Attandance Tracking</span></div>
+               <a href="../landing/index.html"  class="nav-btn"> <div><i class="fa-solid fa-house"></i><span>Home</span></div></a>
+                <a href="../admission/admission.html"  class="nav-btn"><div><i class="fa-solid fa-id-card-clip"></i><span>Admission Requests</span></div></a>
+                <a href="../userAuth/userAuth.html" class="nav-btn"><div><i class="fa-solid fa-user-tie"></i><span>User Verification</span></div></a>
+                <a href="../routine/routine.html" class="nav-btn"><div><i class="fa-solid fa-clipboard-list"></i><span>Update Routine</span></div></a>
+                <a href="../results/results.html" class="nav-btn"> <div><i class="fa-solid fa-newspaper"></i><span>Update Results</span></div></a>
             </div>
             <div class="logout-btn-cont">
                 <button class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i>Log out</button>
@@ -168,8 +170,8 @@
                                     <div class="std-name">John Doe</div>
                                     
                                     <div class="std-action-btns-cont">
-                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-x"></i></button>
-                                    <button class="std-action-btn reject-btn"><i class="fa-solid fa-check"></i></button>
+                                        <button class="std-action-btn reject-btn"><i class="fa-solid fa-x"></i></button>
+                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-check"></i></button>
                                     </div>
                                 </div>
                                 <div class="std-rqst">
@@ -177,8 +179,17 @@
                                     <div class="std-name">John Doe</div>
                                     
                                     <div class="std-action-btns-cont">
-                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-x"></i></button>
-                                    <button class="std-action-btn reject-btn"><i class="fa-solid fa-check"></i></button>
+                                        <button class="std-action-btn reject-btn"><i class="fa-solid fa-x"></i></button>
+                                    <button class="std-action-btn accept-btn"><i class="fa-solid fa-check"></i></button>
+                                    </div>
+                                </div>
+                                <div class="std-rqst">
+                                    <div class="std-img"></div>
+                                    <div class="std-name">John Doe</div>
+                                    
+                                    <div class="std-action-btns-cont">                                        
+                                        <button class="std-action-btn reject-btn"><i class="fa-solid fa-x"></i></button>
+                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-check"></i></button>
                                     </div>
                                 </div>
                                 <div class="std-rqst">
@@ -186,8 +197,8 @@
                                     <div class="std-name">John Doe</div>
                                     
                                     <div class="std-action-btns-cont">
-                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-x"></i></button>
-                                    <button class="std-action-btn reject-btn"><i class="fa-solid fa-check"></i></button>
+                                        <button class="std-action-btn reject-btn"><i class="fa-solid fa-x"></i></button>
+                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-check"></i></button>
                                     </div>
                                 </div>
                                 <div class="std-rqst">
@@ -195,8 +206,8 @@
                                     <div class="std-name">John Doe</div>
                                     
                                     <div class="std-action-btns-cont">
-                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-x"></i></button>
-                                    <button class="std-action-btn reject-btn"><i class="fa-solid fa-check"></i></button>
+                                        <button class="std-action-btn reject-btn"><i class="fa-solid fa-x"></i></button>
+                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-check"></i></button>
                                     </div>
                                 </div>
                                 <div class="std-rqst">
@@ -204,8 +215,8 @@
                                     <div class="std-name">John Doe</div>
                                     
                                     <div class="std-action-btns-cont">
-                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-x"></i></button>
-                                    <button class="std-action-btn reject-btn"><i class="fa-solid fa-check"></i></button>
+                                        <button class="std-action-btn reject-btn"><i class="fa-solid fa-x"></i></button>
+                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-check"></i></button>
                                     </div>
                                 </div>
                                 <div class="std-rqst">
@@ -213,17 +224,8 @@
                                     <div class="std-name">John Doe</div>
                                     
                                     <div class="std-action-btns-cont">
-                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-x"></i></button>
-                                    <button class="std-action-btn reject-btn"><i class="fa-solid fa-check"></i></button>
-                                    </div>
-                                </div>
-                                <div class="std-rqst">
-                                    <div class="std-img"></div>
-                                    <div class="std-name">John Doe</div>
-                                    
-                                    <div class="std-action-btns-cont">
-                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-x"></i></button>
-                                    <button class="std-action-btn reject-btn"><i class="fa-solid fa-check"></i></button>
+                                        <button class="std-action-btn reject-btn"><i class="fa-solid fa-x"></i></button>
+                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-check"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -240,8 +242,8 @@
                                     <div class="std-name">John Doe</div>
                                     
                                     <div class="std-action-btns-cont">
-                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-x"></i></button>
-                                         <button class="std-action-btn reject-btn"><i class="fa-solid fa-check"></i></button>
+                                        <button class="std-action-btn reject-btn"><i class="fa-solid fa-x"></i></button>
+                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-check"></i></button>
                                     </div>
                                 </div>
                                 <div class="std-rqst">
@@ -249,8 +251,8 @@
                                     <div class="std-name">John Doe</div>
                                     
                                     <div class="std-action-btns-cont">
-                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-x"></i></button>
-                                         <button class="std-action-btn reject-btn"><i class="fa-solid fa-check"></i></button>
+                                        <button class="std-action-btn reject-btn"><i class="fa-solid fa-x"></i></button>
+                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-check"></i></button>
                                     </div>
                                 </div>
                                 <div class="std-rqst">
@@ -258,8 +260,7 @@
                                     <div class="std-name">John Doe</div>
                                     
                                     <div class="std-action-btns-cont">
-                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-x"></i></button>
-                                         <button class="std-action-btn reject-btn"><i class="fa-solid fa-check"></i></button>
+                                        
                                     </div>
                                 </div>
                                 <div class="std-rqst">
@@ -267,8 +268,8 @@
                                     <div class="std-name">John Doe</div>
                                     
                                     <div class="std-action-btns-cont">
-                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-x"></i></button>
-                                        <button class="std-action-btn reject-btn"><i class="fa-solid fa-check"></i></button>
+                                        <button class="std-action-btn reject-btn"><i class="fa-solid fa-x"></i></button>
+                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-check"></i></button>
                                     </div>
                                 </div>
                                 <div class="std-rqst">
@@ -276,8 +277,8 @@
                                     <div class="std-name">John Doe</div>
                                     
                                     <div class="std-action-btns-cont">
-                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-x"></i></button>
-                                         <button class="std-action-btn reject-btn"><i class="fa-solid fa-check"></i></button>
+                                        <button class="std-action-btn reject-btn"><i class="fa-solid fa-x"></i></button>
+                                        <button class="std-action-btn accept-btn"><i class="fa-solid fa-check"></i></button>
                                     </div>
                                 </div>
                                 </div>
@@ -286,8 +287,7 @@
                     </div>
             </div>
         </div>
-    </div>
 
-   <script src="main.js"></script>
+   <script src="../nav/nav.js"></script>
 </body>
 </html>
