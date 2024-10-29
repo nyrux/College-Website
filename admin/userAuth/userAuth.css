@@ -10,9 +10,6 @@
     background-color: #000;
     color: #fff;
 }
-
-
-
 .panel-right{
     background-color: var(--panelBoxBg);
     height: 80vh;
@@ -101,4 +98,11 @@
 }
 .fa-check{
     color: #00ac00;
+}
+
+@media(max-width:768px){
+    .panel-right{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+    }
 }
