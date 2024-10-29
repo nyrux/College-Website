@@ -95,7 +95,7 @@ input[type="text"]{
 .rqst-box{
     padding: var(--panelGap);
     width: auto;
-    height: 33vh;
+    height: 45vh;
     background-color: var(--panelBoxBg);
     border-radius: var(--panelRadius);
     display: flex;
@@ -133,6 +133,7 @@ th,td{
 }
 th{
     border-bottom: 1px solid grey;
+    text-transform: uppercase;
 }
 th:nth-child(3),td:nth-child(3){
     border-right: none;
@@ -165,7 +166,7 @@ th:nth-child(3),td:nth-child(3){
 }
 
 
-@media(max-width:992px){
+@media(max-width:1135px){
     .rqst-cont{
         padding: 2vh 0vh;
     }
@@ -189,8 +190,8 @@ th:nth-child(3),td:nth-child(3){
         height: 63vh;
     }
     .rqst-box{
-        height: 29vh;
-        gap: 1vh;
+        height: 45vh;
+        gap: 4vh;
     }
 }
 @media(max-width:493px){
