@@ -31,15 +31,22 @@
     border-radius: 2vh 0vh 0vh 2vh;
     padding: 2vh;
 }
-.login-text{
+.login-head{
     height: 10vh;
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding-left: 4vh;
     font-size: 1.5em;
     font-weight: 600;
     color: var(--primThemeColor);
+    padding-right: 2vh;
+}
+.login-type{
+    padding: 1vh;
+    background-color: rgb(238, 246, 253);
+    border: none;
 }
 .login-input-cont{
     height: fit-content;
@@ -152,18 +159,23 @@ input:focus{
     border-radius: 2vh 0vh 0vh 2vh;
     padding: 3vh;
     position: absolute;
-    right: 50vw;
+    right: 48.7vw;
     display: none;
 }
-.signup-text{
+.signup-head{
     height: 10vh;
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding-left: 4vh;
     font-size: 1.5em;
     font-weight: 600;
     color: var(--primThemeColor); 
+}
+.login-type-signup{
+    background-color: rgb(230, 230, 230);
+    border: none;
 }
 .signup-input-cont{
     width: 100%;
