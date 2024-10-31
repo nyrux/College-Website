@@ -1,0 +1,12 @@
+.nav-btns-cont .nav-btn:nth-child(1){
+    background-color: #fff !important;
+    color: #000 !important;
+}
+.nav-btns-cont .nav-btn:nth-child(1):hover{
+    background-color: #000 !important;
+    color: #fff !important;
+}
+.nav-btns-cont .nav-btn:nth-child(5){
+    background-color: #000;
+    color: #fff;
+}
