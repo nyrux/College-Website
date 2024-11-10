@@ -1,0 +1,237 @@
+
+.panel-right{
+    display: grid;
+    grid-template-columns: 3fr 2.5fr;
+    height: 80vh;
+    gap: var(--panelGap);
+}
+.schedule-cont{
+    height: 100%;
+    width: auto;
+    background-color: #fff;
+    border-radius: var(--panelRadius);
+    padding: var(--panelGap);
+    display: flex;
+    flex-direction: column;
+}
+.date-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #202020;
+    font-weight: normal;
+    font-size: .6em;
+}
+.fa-calendar-days{
+    font-size: 1.5em;
+}
+.schedule-head{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2vh;
+}
+.panel-title{
+    font-size: 1.25em;
+    font-weight: 400;
+}
+.schedule-days{
+    display: flex;
+    justify-content: space-evenly;
+    height: 8vh;
+    gap: 2vh;
+    padding: 2vh;
+}
+.days{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: .8em;
+    border: 1px solid rgb(126, 126, 126);
+    border-radius: 1vh;
+}
+.days:hover{
+    background-color: #000;
+    transition: .25s ease;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+}
+table{
+    border: 1px solid grey;
+    width: 100%;
+    transform: translateY(5vh);
+    font-weight: 300;
+    font-size: .75em;
+    height: 58vh;
+    table-layout: fixed;
+    border-spacing: 0;
+    border-radius: 1svh;
+}
+td{
+    text-align: center;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+table td:nth-child(9) {
+    border-right: none;
+}
+table tr:nth-child(9) td {
+    border-bottom: none;
+}
+.notice-insights-cont{
+    display: grid;
+    grid-template-rows: 3fr 2fr;
+    gap: var(--panelGap);
+}
+.notice-cont,.insights-cont{
+    height: auto;
+    width: 100%;
+    border-radius: var(--panelRadius);
+    background-color: #fff;
+}
+.notice-cont{
+    display: flex;
+    flex-direction: column;
+    padding: var(--panelGap);
+}
+.notice-head{
+    text-align: center;
+    padding: 1vh;
+    margin-bottom: 1vh;
+}
+.notice-title,.notice-desc{
+    outline: none;
+    border: none;
+    background-color: rgb(255, 246, 167);
+}
+.notice-title{
+    height: 8vh;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.15em;
+    border-bottom: none;
+    border-radius: 2vh 2vh 0vh 0vh;
+}
+.notice-desc{
+    height: 20vh;
+    border-radius: 0vh 0vh 2vh 2vh;
+    padding: 2vh;
+    font-size: .8em;
+    text-align: center;
+}
+.send-btn-cont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2vh;
+}
+.send-notice-btn{
+    height: 5vh;
+    width: 5vh;
+    border: none;
+    border-radius: 50%;
+    background-color: #08c508;
+}
+.fa-paper-plane{
+    transform: translateX(40%);
+    color: #fff;
+}
+
+.send-notice-btn:hover{
+    transform: scale(1.2,1.2);
+    transition: .15s ease;
+    cursor: pointer;
+}
+.insights-cont{
+    display: flex;
+    flex-direction: column;
+}
+.insights-title{
+    text-align: center;
+    padding: 1vh;
+}
+.analytics-cont{
+    height: 25vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.data-cont{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    gap: 1vh;
+    padding: 0vh 0vh 2vh 2vh;
+}
+.data{
+    display: grid;
+    grid-template-columns: 2fr 6fr;
+    width: 100%;
+    height: auto;
+    gap: 1vh;
+    font-size: .8em;;
+    border-radius: var(--panelRadius);
+}
+.data:nth-child(1){
+    background-color: rgb(185, 255, 206);
+}
+.data:nth-child(2){
+    background-color: rgb(255, 185, 185);
+}
+.data:nth-child(3){
+    background-color: rgb(201, 201, 201);
+}
+.data-num,.data-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chart-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chart{
+    height: 20vh;
+    width: 20vh;
+    border-radius: 50%;
+    background: conic-gradient(
+        rgb(185, 255, 206) 0% 76.67%, 
+        rgb(255, 185, 185) 76.67% 96.67%,
+        rgb(201, 201, 201) 96.67% 100% 
+      );
+}
+
+  
+@media(max-width:1170px){
+    .panel-right{
+        grid-template-columns: 1fr;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+    }
+    table{
+        height: 35vh;
+        transform: translateY(1vh);
+    }
+    .days{
+        height: 5vh;
+    }
+}
+@media(max-width:576px){
+    .panel-title{
+        font-size: 1em;
+    }
+    .data{
+        font-size: .7em;
+    }
+}
+@media(max-width:474px){
+    .days,table{
+        font-size: .6em;
+    }
+    input,textarea{
+        width: 85vw;
+    }
+}

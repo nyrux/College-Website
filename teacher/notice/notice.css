@@ -95,3 +95,15 @@
 .fa-check{
     transform: translateX(40%);
 }
+
+
+@media(max-width:820px){
+    .panel-right{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width:672px){
+    .panel-right{
+        grid-template-columns: 1fr;
+    }
+}
