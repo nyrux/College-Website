@@ -65,7 +65,9 @@
     border-radius: 2vh 2vh 0vh 0vh;
     padding: 2vh;
     font-weight: 500;
-    background-color: rgb(223, 223, 223);
+    background-color: rgb(251, 255, 196);
+    border-bottom: 1px dashed #444;
+    text-transform: uppercase;
 }
 .notice-desc{
     font-size: .8em;
@@ -92,8 +94,8 @@
     color: #fff;
     background-color: rgb(44, 212, 11);
 }
-.fa-check{
-    transform: translateX(40%);
+.fa-paper-plane{
+    transform: translateX(30%);
 }
 
 

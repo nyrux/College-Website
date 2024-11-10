@@ -218,6 +218,9 @@ table tr:nth-child(9) td {
     .days{
         height: 5vh;
     }
+    .insights-cont,.notice-cont{
+        height: fit-content;
+    }
 }
 @media(max-width:576px){
     .panel-title{
