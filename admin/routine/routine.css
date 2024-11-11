@@ -21,7 +21,19 @@
     background-color: #fff;
     border-radius: var(--panelRadius);
     padding: var(--panelGap);
-    gap: 10vh;
+    gap: 5vh;
+    display: flex;
+    flex-direction: column;
+}
+.config-btns-cont{
+    display: flex;
+    justify-content: flex-end;
+    gap: 2vh;
+    font-size: 1.25em;
+}
+.fa-calendar-days,.fa-angle-left,.fa-angle-right{
+    
+    cursor: pointer;
 }
 .table-cont{
     height: 100%;

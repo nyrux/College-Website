@@ -30,6 +30,8 @@
     background-color: rgb(238, 246, 253);
     border-radius: 2vh 0vh 0vh 2vh;
     padding: 2vh;
+    display: flex;
+    flex-direction: column;
 }
 .login-head{
     height: 10vh;
@@ -42,6 +44,18 @@
     font-weight: 600;
     color: var(--primThemeColor);
     padding-right: 2vh;
+}
+.input-img-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[type="file"]{
+    border: 1px solid rgb(206, 206, 206);
+    width: 8vh;
+    height: 8vh;
+    outline: none;
+    border-radius: 50%;
 }
 .login-type{
     padding: 1vh;
@@ -157,13 +171,12 @@ input:focus{
     width: 40vw;
     background-color: rgb(230, 230, 230);
     border-radius: 2vh 0vh 0vh 2vh;
-    padding: 3vh;
+    padding: 2vh;
     position: absolute;
     right: 48.7vw;
     display: none;
 }
 .signup-head{
-    height: 10vh;
     width: 100%;
     display: flex;
     align-items: center;
