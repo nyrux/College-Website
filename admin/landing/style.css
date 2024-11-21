@@ -45,12 +45,23 @@
     align-items: center;
     flex-direction: column;
 }
+.remarks-info-btn-cont{
+    display: flex;
+    justify-content: flex-end;
+    color: rgb(63, 63, 63);
+    gap: 1vh;
+    width: 100%;
+}
+.fa-pen-to-square,.fa-circle-info{
+    cursor: pointer;
+}
 .applicant-profile{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     line-height: 20px;
+    width: 100%;
 }
 .applicant-name{
     margin-top: 2vh;
