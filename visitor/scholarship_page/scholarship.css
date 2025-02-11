@@ -1,0 +1,325 @@
+.advert-cont{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.text-prim{
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+}
+.text-sec{
+    font-weight: 200;
+    font-size: 1.5em;
+}
+@media(max-width:1200px){
+    .text-prim{
+        font-size: 1.25em;
+    }
+}
+@media(max-width:992px){
+    .text-sec{
+        font-size: 1em;
+    }
+}
+@media(max-width:685px){
+    .text-prim{
+        font-size: .9em;
+    }
+    .text-sec{
+        font-size: .7em;
+    }
+}
+@media(max-width:485px){
+    .text-prim{
+        font-size: .7em;
+    }
+    .text-sec{
+        font-size: .6em;
+        font-weight: 400;
+    }
+}
+/* Scholarship Section ----------------------------------------------------------------*/
+.scholarship-wrapper{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4vh;
+}
+.sch-title{
+    width: 100%;
+    font-family: var(--headingFont);
+    font-size: 3.5em;
+    color: #285d88;
+    text-align: center;
+}
+.sch-desc{
+    width: 60%;
+    text-align: justify;
+    color: var(--descColor);
+}
+.sch-prog-wrapper{
+    height: fit-content;
+    width: 100%;
+    padding: 2vh;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    gap: 5vh;
+}
+.sch-prog-cont{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+}
+.sch-banner{
+    height: 60vh;
+    width: 40%;
+    border-radius: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.about-sch{
+    height: 60vh;
+    width: 40%;
+    padding: 0vh 5vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.sch-banner:nth-child(1){
+    background-color: #74c044;
+}
+.sch-banner:nth-child(2){
+    background-color: #24a893;
+}
+.sch-name-cont{
+    width: fit-content;
+    height: fit-content;
+    color: #fff;
+}
+.sch-bnr-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.sch-bnr-botm{
+    text-align: center;
+    font-size: 3em;
+    font-weight: 700;
+    transform: translateY(-40px);
+}   
+.sch-desc-name{
+    color: #74c044;
+    font-size: 2em;
+}
+.about-sch-desc{
+    width: 70%;
+    text-align: justify;
+    color: var(--descColor);
+}
+.sch-more-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.kic-sch-name{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rqs-btn{
+    padding: 1vh 4vh;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+}
+.rqs-btn:hover{
+    transform: scale(1.1,1.1);
+    transition: var(--transition);
+}
+@media(max-width:992px){
+    .sch-prog-cont{
+        flex-direction: column;
+    }
+    .sch-banner,.about-sch{
+        width: 80%;
+    }
+    .about-sch{
+        align-items: center;
+    }
+    .sch-prog-cont:nth-child(2){
+        flex-direction: column-reverse;
+    }
+}
+
+@media(max-width:576px){
+    .sch-desc-name{
+        font-size: 1.25em;
+        padding: 2vh;
+        width: 100%;
+        text-align: center;
+    }
+    .sch-title{
+        font-size: 2em;
+    }
+    .sch-desc{
+        font-size: .8em;
+    }
+    .sch-banner,.about-sch{
+        height: 40vh;
+    }
+    .sch-bnr-botm{
+        font-size: 2em !important;
+    }
+    .three-a{
+        font-size: 3em !important;
+    }
+    .sch-bnr-botm{
+        transform: translate(-5px,-10px) !important;
+    }
+    .sch-banner,.about-sch{
+        width: 100%;
+    }
+    .about-sch-desc{
+        font-size: .8em;
+    }
+    .kant-plus-2{
+        font-size: 1.5em !important;
+        margin-bottom: 1vh;
+    }
+    .kic-sch{
+        font-size: 2em !important;
+    }
+    .sch-desc{
+        width: 90%;
+    }
+    .about-sch-desc{
+        width: 100%;
+    }
+    .about-sch{
+        height: fit-content;
+    }
+}
+
+
+/* Scholarsip Receipients Section----------------------------------------------------- */
+
+.sch-rcp-wrapper{
+    margin-top: 6vh;
+    padding: 2vh;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+}
+.rcp-cont{
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    align-items: center;
+    width: 80%;
+}
+.sch-name{
+    font-size: 2em;
+    font-weight: 500;
+    color: var(--descColor);
+    text-decoration: underline;
+    text-decoration-color: var(--descColor);
+    text-decoration-thickness: 4px;
+    text-underline-offset: 6px;
+}
+.rcp-name{
+    font-size: 2.5em;
+    color: #74c044;
+    font-weight: 600;
+}
+.rcp-desc-cont{
+    padding: 2vh 6vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+}
+.rcp-desc{
+    color: var(--descColor);
+    text-align: justify;
+}
+.rcp-img-cont{
+    height: 80vh;
+    width: 70vh;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.rcp-img-1{
+    background-image: url('https://bicnepal.edu.np/storage/61/01HV6C3R2KMSQ0Z3924W4F6DGX.png');
+}
+.rcp-img-2{
+    background-image: url('https://bicnepal.edu.np/storage/60/01HV6C0C57HTTD348QVP9VQ7BA.png');
+}
+@media(max-width:1200px){
+    .rcp-name,.sch-name{
+        font-size: 1.5em;
+    }
+    .sch-desc{
+        font-size: .8em;
+    }
+    .rcp-cont{
+        width: 100%;
+    }
+}
+@media(max-width:996px){
+    .rcp-img-cont{
+        height: 60vh;
+        width: 50vh;
+    }
+}
+@media(max-width:768px){
+    .rcp-cont:nth-child(1){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .rcp-cont:nth-child(2){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .rcp-img-cont{
+        width: 70vh;
+    }
+}
+@media(max-width:576px){
+    .rcp-img-cont{
+        width: 50vh;
+        height: 50vh;
+    }
+    .rcp-name,.sch-name{
+        font-size: 1.25em;
+    }
+}
