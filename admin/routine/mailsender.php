@@ -62,12 +62,12 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com'; 
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'neuralnexus95@gmail.com';
-        $mail->Password   = 'jakiicqosrqntmmg';
+        $mail->Username   = 'nirambrt3@gmail.com';
+        $mail->Password   = 'mtkbsdprrymworjc';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
-        $mail->setFrom('anonymous@gmail.com', 'Anonymous');
+        $mail->setFrom('nirambrt3@gmail.com', 'Anonymous');
 
         foreach ($emailArray as $email) {
             $mail->addAddress($email);
