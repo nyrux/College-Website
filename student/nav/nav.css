@@ -145,14 +145,6 @@ a{
     animation: shake 0.5s;
     cursor: pointer;
 }
-@keyframes shake {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(20deg); }
-    50% { transform: rotate(-20deg); }
-    75% { transform: rotate(20deg); }
-    100% { transform: rotate(0deg); }
-}
-
 
 @media(max-width:1135px){
     .nav-btns-cont{

@@ -2,12 +2,11 @@
     height: 80vh;
     width: 100%;
     display: grid;
-    grid-template-columns: 4fr 3fr;
-    gap: var(--panelGap);
+    grid-template-columns: 4fr;
 }
 .routine-panel{
     height: 80vh;
-    width: auto;
+    width: fit-content;
     padding: var(--panelGap);
     background-color: var(--panelBg);
     border-radius: var(--panelRadius);
@@ -41,6 +40,7 @@
     padding: var(--panelGap);
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 .date-cont{
     display: flex;
@@ -56,7 +56,6 @@
 .schedule-head{
     display: flex;
     justify-content: space-between;
-    padding: 0 2vh;
 }
 .panel-title{
     font-size: 1.25em;
@@ -67,8 +66,8 @@
     justify-content: space-evenly;
     align-items: center;
     height: fit-content;
+    padding: 2vh 0vh;
     gap: 2vh;
-    padding: 2vh;
 }
 .days{
     width: 100%;
@@ -96,7 +95,7 @@ table{
     height: 58vh;
     table-layout: fixed;
     border-spacing: 0;
-    border-radius: 1svh;
+    border-radius: 1vh;
 }
 td{
     text-align: center;
@@ -231,9 +230,6 @@ table tr:nth-child(9) td {
     }
 }
 @media(max-width:525px){
-    .schedule-cont{
-        padding: 2vh;
-    }
     .days{
         height: 6vh;
         width: 6vh;
@@ -242,13 +238,20 @@ table tr:nth-child(9) td {
     table{
         transform: translateY(0vh);
         font-size: .5em;
-        width: 80vw;
-    }
-    .schedule-days{
-        width: 80vw;
+        width: fit-content;
     }
     .rank{
         font-size: .65em;
         padding-left: 1vh;
+    }
+}
+@media(max-width:445px){
+    .schedule-days{
+        gap: 5px;
+    }
+    .days{
+        height: 4.5vh;
+        width: 4.5vh;
+        font-size: .5em;
     }
 }

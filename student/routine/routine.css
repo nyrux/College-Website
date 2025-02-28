@@ -10,7 +10,9 @@
     background-color: #000;
     color: #fff;
 }
-
+body{
+    overflow-y: hidden !important;
+}
 
 .panel-right{
     height: 80vh;
@@ -126,9 +128,18 @@ table tr:nth-child(9) td {
     table{
         transform: translateY(0vh);
         font-size: .5em;
-        width: 80vw;
+        width: 100%;
     }
     .schedule-days{
-        width: 80vw;
+        width: 100%;
+    }
+}@media(max-width:445px){
+    .schedule-days{
+        gap: 5px;
+    }
+    .days{
+        height: 5vh;
+        width: 5vh;
+        font-size: .5em;
     }
 }
