@@ -12,3 +12,7 @@ barsBtn.addEventListener('click',()=>{
 cutBtn.addEventListener('click',()=>{
     sliderNav.style.left = '100%';
 });
+
+document.querySelector('.logout-btn').addEventListener('click', () => {
+    location.href = "../php/logout.php";
+})
