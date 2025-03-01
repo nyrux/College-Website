@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION['admin'])){
+    header('Location: ../php/auth.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,11 +34,11 @@
                 <span><i class="fa-solid fa-x"></i></span>
             </div>
             <div class="nav-btns-cont">
-               <a href="../landing/index.html"  class="nav-btn"> <div><i class="fa-solid fa-house"></i><span>Home</span></div></a>
-                <a href="../admission/admission.html"  class="nav-btn"><div><i class="fa-solid fa-id-card-clip"></i><span>Admission Requests</span></div></a>
-                <a href="../userAuth/userAuth.html" class="nav-btn"><div><i class="fa-solid fa-user-tie"></i><span>User Verification</span></div></a>
-                <a href="../routine/routine.html" class="nav-btn"><div><i class="fa-solid fa-clipboard-list"></i><span>Update Routine</span></div></a>
-                <a href="../results/results.html" class="nav-btn"> <div><i class="fa-solid fa-newspaper"></i><span>Actions Database</span></div></a>
+               <a href="../landing/index.php"  class="nav-btn"> <div><i class="fa-solid fa-house"></i><span>Home</span></div></a>
+                <a href="../admission/admission.php"  class="nav-btn"><div><i class="fa-solid fa-id-card-clip"></i><span>Admission Requests</span></div></a>
+                <a href="../userAuth/userAuth.php" class="nav-btn"><div><i class="fa-solid fa-user-tie"></i><span>User Verification</span></div></a>
+                <a href="../routine/routine.php" class="nav-btn"><div><i class="fa-solid fa-clipboard-list"></i><span>Update Routine</span></div></a>
+                <a href="../results/results.php" class="nav-btn"> <div><i class="fa-solid fa-newspaper"></i><span>Actions Database</span></div></a>
             </div>
             <div class="logout-btn-cont">
                 <button class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i>Log out</button>
