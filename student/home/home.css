@@ -3,6 +3,8 @@
     width: 100%;
     display: grid;
     grid-template-columns: 4fr;
+    overflow-y: scroll;
+    scrollbar-width: thin;
 }
 .routine-panel{
     height: 80vh;
@@ -19,6 +21,7 @@
     gap: var(--panelGap);
 }
 .notice-panel{
+    margin-top: 2vh;
     height: auto;
     width: 100%;
     background-color: var(--panelBg);
