@@ -139,22 +139,22 @@
         </div>
 
         <div class="contact-form-cont">
-            <form action="">
+            <form action="contact.php" method="post">
                 <div class="form-container">
                     <div class="form-item">
                         <span class="form-title">Send Us Your Query.</span>
                     </div>
                     <div class="form-item">
-                        <input type="text" name="" id="" placeholder="Enter Your Name">
+                        <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
                     </div>
                     <div class="form-item">
-                        <input type="email" name="" id="" placeholder="Enter Your Email">
+                        <input type="email" name="email" id="" placeholder="Enter Your Email" required>
                     </div>
                     <div class="form-item">
-                        <input type="text" name="" id="" placeholder="Enter Your Phone Number">
+                        <input type="text" name="phnum" id="" placeholder="Enter Your Phone Number" required>
                     </div>
                     <div class="form-item">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Write Your Query Here..."></textarea>
+                        <textarea name="query" id="query" cols="30" rows="10" placeholder="Write Your Query Here..." required></textarea>
                     </div>
                     <div class="form-item">
                         <button type="submit" class="submit-btn" id="submitBtn">Submit</button>
