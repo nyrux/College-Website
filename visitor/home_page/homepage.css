@@ -431,7 +431,7 @@
     transition: .3s ease;
 }
 .life-img-1{
-    background-image: url('holi.jpg');
+    background-image: url('life_img/holi.jpg');
 }
 .life-bottom-row{
     height: 65vh;
@@ -441,10 +441,10 @@
     gap: 4vh;
 }
 .life-img-2{
-    background-image: url('iot_fest.jpg');
+    background-image: url('life_img/iot_fest.jpg');
 }
 .life-img-3{
-    background-image: url('carnival.jpg');
+    background-image: url('life_img/carnival.jpg');
 }
 .about-event{
     height: 100%;
