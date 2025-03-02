@@ -43,7 +43,6 @@
     padding: var(--panelGap);
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 .date-cont{
     display: flex;
@@ -53,12 +52,10 @@
     font-weight: normal;
     font-size: .6em;
 }
-.fa-calendar-days{
-    font-size: 1.5em;
-}
 .schedule-head{
     display: flex;
     justify-content: space-between;
+    padding: 0 2vh;
 }
 .panel-title{
     font-size: 1.25em;
@@ -69,8 +66,8 @@
     justify-content: space-evenly;
     align-items: center;
     height: fit-content;
-    padding: 2vh 0vh;
     gap: 2vh;
+    padding-bottom: 2vh;
 }
 .days{
     width: 100%;
@@ -111,6 +108,36 @@ table td:nth-child(9) {
 table tr:nth-child(9) td {
     border-bottom: none;
 }
+@media(max-width:525px){
+    .schedule-cont{
+        padding: 2vh;
+    }
+    .days{
+        height: 6vh;
+        width: 6vh;
+        font-size: .6em;
+    }
+    table{
+        transform: translateY(0vh);
+        font-size: .5em;
+        width: 100%;
+    }
+    .schedule-days{
+        width: 100%;
+    }
+}@media(max-width:445px){
+    .schedule-days{
+        gap: 5px;
+    }
+    .days{
+        height: 5vh;
+        width: 5vh;
+        font-size: .5em;
+    }
+}
+
+/*Notice Panel*/
+
 .notice-panel{
     display: flex;
     flex-direction: column;
