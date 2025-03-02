@@ -241,7 +241,7 @@ table tr:nth-child(9) td {
     table{
         transform: translateY(0vh);
         font-size: .5em;
-        width: fit-content;
+        width: 100%;
     }
     .rank{
         font-size: .65em;
