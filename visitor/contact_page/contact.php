@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
         $mail->send();
         echo "<script>alert('Email has been sent successfully!');
-        location.href = 'contact.html';
+        location.href = 'contact.html'; 
         </script>";
     } catch (Exception $e) {
         echo "Email could not be sent. Mailer Error: {$mail->ErrorInfo}";

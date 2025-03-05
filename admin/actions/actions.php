@@ -11,7 +11,7 @@ if(!isset($_SESSION['admin'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Stylesheet -->
-        <link rel="stylesheet" href="routine.css">
+        <link rel="stylesheet" href="actions.css">
         <!-- Nav -->
         <link rel="stylesheet" href="../nav/nav.css">
         <title>Admin Panel</title>
