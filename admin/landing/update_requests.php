@@ -26,10 +26,10 @@ if(isset($_GET['id']) && isset($_GET['a']) && isset($_GET['form']) && isset($_GE
     $stmt2->execute();
     $stmt2->close();
             if($redirect === 'home'){
-                header('location:index.html');
+                header('location:index.php');
             }
             elseif($redirect === 'admission'){
-                header('location:../admission/admission.html');
+                header('location:../admission/admission.php');
             }
             
     }
@@ -50,10 +50,10 @@ if(isset($_GET['id']) && isset($_GET['a']) && isset($_GET['form']) && isset($_GE
     $stmt2->execute();
     $stmt2->close();
         if($redirect === 'home'){
-            header('location:../userAuth/userAuth.html');
+            header('location:../userAuth/userAuth.php');
         }
         elseif($redirect === 'admission'){
-            header('location:../admission/admission.html');
+            header('location:../admission/admission.php');
         }
         
 }

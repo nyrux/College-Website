@@ -64,13 +64,15 @@ session_start();
 <body>
 
     <div class="container">
+        <?php if(!isset($_SESSION['password'])){ ?>
+            <form method="POST" id="emailbox">
+            <h2>Forgot Password</h2>
+            <p>Enter your email to reset your password.</p>
+                <input type="email" name="email" placeholder="Enter your email" id="email" required>
+                <button type="submit" name="reset">Reset Password</button>
+            </form>
+        <?php } ?>
         
-        <form method="POST" id="emailbox">
-        <h2>Forgot Password</h2>
-        <p>Enter your email to reset your password.</p>
-            <input type="email" name="email" placeholder="Enter your email" id="email" required>
-            <button type="submit" name="reset">Reset Password</button>
-        </form>
         <form method="POST" id="code">
             <input type="text" name="code" placeholder="Enter 6 digit code" required>
             <button type="submit" name="submit">Submit</button>

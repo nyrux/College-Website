@@ -26,7 +26,7 @@ $(document).ready(function(){
             },
             success:function(response){
                 if(response === "success"){
-                    location.href = "../home_page/home.html";
+                    location.href = "../../student/home/home.php";
                 }else{
                     $('.toast-body').html(response);
                     $('.toast').show();

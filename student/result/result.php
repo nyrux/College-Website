@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION['login'])){
+    header("Location: ../../visitor/login_page/login.html");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,21 +34,21 @@
                 <span><i class="fa-solid fa-x"></i></span>
             </div>
             <div class="nav-btns-cont">
-                <a href="../home/home.html"  class="nav-btn"> <div><i class="fa-solid fa-house"></i><span>Home</span></div></a>
-                 <a href="../routine/routine.html"  class="nav-btn"><div><i class="fa-solid fa-clipboard-list"></i><span>Routine</span></div></a>
-                 <a href="../result/result.html" class="nav-btn"><div><i class="fa-solid fa-newspaper"></i><span>Results</span></div></a>
-                 <a href="../notice/notice.html" class="nav-btn"><div><i class="fa-solid fa-clipboard"></i><span>Notice</span></div></a>
+                <a href="../home/home.php"  class="nav-btn"> <div><i class="fa-solid fa-house"></i><span>Home</span></div></a>
+                 <a href="../routine/routine.php"  class="nav-btn"><div><i class="fa-solid fa-clipboard-list"></i><span>Routine</span></div></a>
+                 <a href="../result/result.php" class="nav-btn"><div><i class="fa-solid fa-newspaper"></i><span>Results</span></div></a>
+                 <a href="../notice/notice.php" class="nav-btn"><div><i class="fa-solid fa-clipboard"></i><span>Notice</span></div></a>
              </div>
             <div class="logout-btn-cont">
                 <button class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i>Log out</button>
             </div>
         </div>
         <div class="container">
-            <div class="panel-top">
+        <div class="panel-top">
                 <div class="profile-cont">
-                    <div class="profile-picture"></div>
+                    <img src="../../uploads/<?php echo $_SESSION['image']; ?>" class="profile-picture">
                     <div class="profile-name">
-                        <div class="person-name">John Doe</div>
+                        <div class="person-name"><?php echo $_SESSION['user'] ?></div>
                         <div class="person-role">Student</div>
                     </div>
                 </div>
@@ -56,21 +62,21 @@
                    <div class="grade-cont">
                        <div class="grade-title">grade 11</div>
                             <div class="section-cont">
-                                <a href="../result/grade11/sec1.html"><div class="section-name">Section 1</div></a>
-                                <a href="../result/grade11/sec2.html"><div class="section-name">Section 2</div></a>
-                                <a href="../result/grade11/sec3.html"><div class="section-name">Section 3</div></a>
-                                <a href="../result/grade11/sec4.html"><div class="section-name">Section 4</div></a>
-                                <a href="../result/grade11/sec5.html"><div class="section-name">Section 5</div></a>
+                                <a href="../result/grade11/sec1.php"><div class="section-name">Section 1</div></a>
+                                <a href="../result/grade11/sec2.php"><div class="section-name">Section 2</div></a>
+                                <a href="../result/grade11/sec3.php"><div class="section-name">Section 3</div></a>
+                                <a href="../result/grade11/sec4.php"><div class="section-name">Section 4</div></a>
+                                <a href="../result/grade11/sec5.php"><div class="section-name">Section 5</div></a>
                             </div>
                     </div>
                    <div class="grade-cont">
                        <div class="grade-title">grade 12</div>
                        <div class="section-cont">
-                        <a href="../result/grade12/sec1.html"><div class="section-name">Section 1</div></a>
-                        <a href="../result/grade12/sec2.html"><div class="section-name">Section 2</div></a>
-                        <a href="../result/grade12/sec3.html"><div class="section-name">Section 3</div></a>
-                        <a href="../result/grade12/sec4.html"><div class="section-name">Section 4</div></a>
-                        <a href="../result/grade12/sec5.html"><div class="section-name">Section 5</div></a>
+                        <a href="../result/grade12/sec1.php"><div class="section-name">Section 1</div></a>
+                        <a href="../result/grade12/sec2.php"><div class="section-name">Section 2</div></a>
+                        <a href="../result/grade12/sec3.php"><div class="section-name">Section 3</div></a>
+                        <a href="../result/grade12/sec4.php"><div class="section-name">Section 4</div></a>
+                        <a href="../result/grade12/sec5.php"><div class="section-name">Section 5</div></a>
                     </div>
                     </div>
             </div>

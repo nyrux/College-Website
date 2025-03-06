@@ -1,9 +1,8 @@
 <?php
 session_start();
-if(!isset($_SESSION['admin'])){
-    header('Location: ../php/auth.php');
+if(!isset($_SESSION['login'])){
+    header('Location: ../../../visitor/login_page/login.html');
 }
-require_once('../php/config.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,9 +11,9 @@ require_once('../php/config.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Stylesheet -->
-        <link rel="stylesheet" href="routine.css">
+        <link rel="stylesheet" href="../resultsheetstyle.css">
         <!-- Nav -->
-        <link rel="stylesheet" href="../nav/nav.css">
+        <link rel="stylesheet" href="../../nav/nav.css">
         <title>Admin Panel</title>
         <!-- Poppins Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +22,7 @@ require_once('../php/config.php');
         <!-- Font Awesome CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <title>Actions</title>
+    <title>Update Results</title>
 </head>
 <body>
     
@@ -31,70 +30,45 @@ require_once('../php/config.php');
         <div class="panel-left">
             
             <div class="admin-panel-text">
-                <span class="admin-panel">Admin Panel</span>
+                <span class="admin-panel">Student Panel</span>
                 <span><i class="fa-solid fa-x"></i></span>
             </div>
             <div class="nav-btns-cont">
-               <a href="../landing/index.php"  class="nav-btn"> <div><i class="fa-solid fa-house"></i><span>Home</span></div></a>
-                <a href="../admission/admission.php"  class="nav-btn"><div><i class="fa-solid fa-id-card-clip"></i><span>Admission Requests</span></div></a>
-                <a href="../userAuth/userAuth.php" class="nav-btn"><div><i class="fa-solid fa-user-tie"></i><span>User Verification</span></div></a>
-                <a href="../routine/routine.php" class="nav-btn"><div><i class="fa-solid fa-clipboard-list"></i><span>Update Routine</span></div></a>
-                <a href="../results/results.php" class="nav-btn"> <div><i class="fa-solid fa-newspaper"></i><span>Update Result</span></div></a>
-                <a href="../actions/actions.php" class="nav-btn"> <div><i class="fa-solid fa-database"></i><span>Actions Database</span></div></a>
-            </div>
+                <a href="../../home/home.php"  class="nav-btn"> <div><i class="fa-solid fa-house"></i><span>Home</span></div></a>
+                 <a href="../../routine/routine.php"  class="nav-btn"><div><i class="fa-solid fa-clipboard-list"></i><span>Routine</span></div></a>
+                 <a href="../../result/result.php" class="nav-btn"><div><i class="fa-solid fa-newspaper"></i><span>Results</span></div></a>
+                 <a href="../../notice/notice.php" class="nav-btn"><div><i class="fa-solid fa-clipboard"></i><span>Notice</span></div></a>
+             </div>
             <div class="logout-btn-cont">
                 <button class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i>Log out</button>
             </div>
         </div>
         <div class="container">
             <div class="panel-top">
-                <div class="profile-cont">
-                    <div class="profile-picture"></div>
+            <div class="profile-cont">
+                    <img src="../../../uploads/<?php echo $_SESSION['image']; ?>" class="profile-picture">
                     <div class="profile-name">
-                        <div class="person-name">Himal Baral</div>
-                        <div class="person-role">Coordinator</div>
+                        <div class="person-name"><?php echo $_SESSION['user'] ?></div>
+                        <div class="person-role">Student</div>
                     </div>
                 </div>
                 <div class="icons-cont">
                     <i class="fa-solid fa-bell"></i><i class="fa-solid fa-bars"></i>
                 </div>
             </div>
+
             
             <div class="panel-right">
-            <div class="panel-head">
-                    <div class="panel-title">Results</div>
-                    <div class="routine-nav-cont">
-                        <i class="fa-solid fa-add" id="add"></i>
-                    </div>
-                </div>
-            <div class="upload-container">
-                <span class="panel-head"><h2>Upload Excel File</h2><i class="fas fa-window-close" id="close"></i></span>
-                <form action="insert.php" method="POST" enctype="multipart/form-data">
-                <input type="text" name="title" placeholder="Enter title">
-                <input id="file-upload" type="file" name="excel" required>
-                <span class="grade_section">
-                    Grade: 
-                    <select name="grade" required>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                    </select>
-                    Section: 
-                    <select name="section" required>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
+                <div class="table-title">Grade 12 - Section 1</div>
+                <?php
+                require_once('../../../php/config.php');
+                $grade = "121";
+                $sql = "SELECT id, title, data, datetime FROM results WHERE grade = ? ORDER BY id DESC";
 
-                    </select>
-                </span>
-                <button type="submit" name="submit">Upload and Import</button>
-                </form>
-            </div>
-            <?php
-$sql = "SELECT id, title, data, datetime FROM results ORDER BY id DESC";
-$result = $conn->query($sql);
-
+$stmt = $conn->prepare($sql);
+$stmt -> bind_param("s", $grade);
+$stmt -> execute();
+$result = $stmt->get_result();
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $data = json_decode($row["data"], true);
@@ -131,10 +105,13 @@ if ($result->num_rows > 0) {
 }
 ?>
 
+                
+                
+            </div>
             </div>
         </div>
-    </div>
-    <script src="../nav/nav.js"></script>
-    <script src="routine.js"></script>
+
+    <script src="../../nav/nav.js"></script>
+
 </body>
 </html>
