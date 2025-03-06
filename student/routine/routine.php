@@ -54,64 +54,220 @@ if(!isset($_SESSION['login'])){
                 </div>
             </div>
             <div class="panel-right">
-                
-                <div class="panel-head">
-                    <div class="panel-title">My Routine</div>
-                    <div class="routine-nav-cont">
-                        <i class="fa-solid fa-calendar-days routine-btn"></i>
-                        <i class="fa-solid fa-angle-left routine-btn"></i>
-                        <i class="fa-solid fa-angle-right routine-btn"></i>
-                    </div>
+                <div class="rqst-type-head">
+                    <span class="cal-type-title">
+                        <input type="date" id="dateInput">
+
+                    </span>
+                    
                 </div>
-
-                <div class="schedule-cont">
-                     <div class="schedule-days">
-                         <div class="days">sun</div>
-                         <div class="days">mon</div>
-                         <div class="days">tue</div>
-                         <div class="days">wed</div>
-                         <div class="days">thu</div>
-                         <div class="days">fri</div>
-                         <div class="days">sat</div>
-                     </div>
- 
-                     <div class="schedule-table">
-                         <table>
-                             <tr>
-                               <td></td><td>sec-1</td><td>sec-2</td><td>sec-3</td><td>sec-4</td><td>sec-5</td><td>sec-6</td><td>sec-7</td><td>sec-8</td>
-                             </tr>
-                             <tr>
-                               <td>time-1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                             </tr>
-                             <tr>
-                               <td>time-2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                             </tr>
-                             <tr>
-                               <td>time-3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                             </tr>
-                             <tr>
-                               <td>time-4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                             </tr>
-                             <tr>
-                               <td>time-5</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                             </tr>
-                             <tr>
-                               <td>time-6</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                             </tr>
-                             <tr>
-                               <td>time-7</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                             </tr>
-                             <tr>
-                               <td>time-8</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                             </tr>
-                           </table>
-                           
-                     </div>
-
+         
+                <div class="table-cont">
+                    <table id="morningRoutine" border="1">
+                        <tr>
+                            <td style="color: #fff;background-color: #464646;">MORNING</td>
+                            <td>6:10-6:50</td>
+                            <td>6:50-7:30</td>
+                            <td>7:35-8:15</td>
+                            <td>8:50-8:55</td>
+                            <td>8:55-9:20</td>
+                            <td>9:20-10:00</td>
+                            <td>10:00-10:40</td>
+                            <td>10:45-11:25</td>
+                            <td>11:25-12:05</td>
+                        </tr>
+                        <tr>
+                            <td>Section 1</td>
+                            <td><input type="text" id="morning_section1_period1"></td>
+                            <td><input type="text" id="morning_section1_period2"></td>
+                            <td><input type="text" id="morning_section1_period3"></td>
+                            <td><input type="text" id="morning_section1_period4"></td>
+                            <td><input type="text" id="morning_section1_period5"></td>
+                            <td><input type="text" id="morning_section1_period6"></td>
+                            <td><input type="text" id="morning_section1_period7"></td>
+                            <td><input type="text" id="morning_section1_period8"></td>
+                            <td><input type="text" id="morning_section1_period9"></td>
+                        </tr>
+                        <tr>
+                            <td>Section 2</td>
+                            <td><input type="text" id="morning_section2_period1"></td>
+                            <td><input type="text" id="morning_section2_period2"></td>
+                            <td><input type="text" id="morning_section2_period3"></td>
+                            <td><input type="text" id="morning_section2_period4"></td>
+                            <td><input type="text" id="morning_section2_period5"></td>
+                            <td><input type="text" id="morning_section2_period6"></td>
+                            <td><input type="text" id="morning_section2_period7"></td>
+                            <td><input type="text" id="morning_section2_period8"></td>
+                            <td><input type="text" id="morning_section2_period9"></td>
+                        </tr>
+                        <tr>
+                            <td>Section 3</td>
+                            <td><input type="text" id="morning_section3_period1"></td>
+                            <td><input type="text" id="morning_section3_period2"></td>
+                            <td><input type="text" id="morning_section3_period3"></td>
+                            <td><input type="text" id="morning_section3_period4"></td>
+                            <td><input type="text" id="morning_section3_period5"></td>
+                            <td><input type="text" id="morning_section3_period6"></td>
+                            <td><input type="text" id="morning_section3_period7"></td>
+                            <td><input type="text" id="morning_section3_period8"></td>
+                            <td><input type="text" id="morning_section3_period9"></td>
+                        </tr>
+                        <tr>
+                            <td>Section 4</td>
+                            <td><input type="text" id="morning_section4_period1"></td>
+                            <td><input type="text" id="morning_section4_period2"></td>
+                            <td><input type="text" id="morning_section4_period3"></td>
+                            <td><input type="text" id="morning_section4_period4"></td>
+                            <td><input type="text" id="morning_section4_period5"></td>
+                            <td><input type="text" id="morning_section4_period6"></td>
+                            <td><input type="text" id="morning_section4_period7"></td>
+                            <td><input type="text" id="morning_section4_period8"></td>
+                            <td><input type="text" id="morning_section4_period9"></td>
+                        </tr>
+                        <tr>
+                            <td>Section 5</td>
+                            <td><input type="text" id="morning_section5_period1"></td>
+                            <td><input type="text" id="morning_section5_period2"></td>
+                            <td><input type="text" id="morning_section5_period3"></td>
+                            <td><input type="text" id="morning_section5_period4"></td>
+                            <td><input type="text" id="morning_section5_period5"></td>
+                            <td><input type="text" id="morning_section5_period6"></td>
+                            <td><input type="text" id="morning_section5_period7"></td>
+                            <td><input type="text" id="morning_section5_period8"></td>
+                            <td><input type="text" id="morning_section5_period9"></td>
+                        </tr>
+                        <tr>
+                            <td>Section 6</td>
+                            <td><input type="text" id="morning_section6_period1"></td>
+                            <td><input type="text" id="morning_section6_period2"></td>
+                            <td><input type="text" id="morning_section6_period3"></td>
+                            <td><input type="text" id="morning_section6_period4"></td>
+                            <td><input type="text" id="morning_section6_period5"></td>
+                            <td><input type="text" id="morning_section6_period6"></td>
+                            <td><input type="text" id="morning_section6_period7"></td>
+                            <td><input type="text" id="morning_section6_period8"></td>
+                            <td><input type="text" id="morning_section6_period9"></td>
+                        </tr>
+                        <tr>
+                            <td>Section 7</td>
+                            <td><input type="text" id="morning_section7_period1"></td>
+                            <td><input type="text" id="morning_section7_period2"></td>
+                            <td><input type="text" id="morning_section7_period3"></td>
+                            <td><input type="text" id="morning_section7_period4"></td>
+                            <td><input type="text" id="morning_section7_period5"></td>
+                            <td><input type="text" id="morning_section7_period6"></td>
+                            <td><input type="text" id="morning_section7_period7"></td>
+                            <td><input type="text" id="morning_section7_period8"></td>
+                            <td><input type="text" id="morning_section7_period9"></td>
+                        </tr>
+                        <tr>
+                            <td>Section 8</td>
+                            <td><input type="text" id="morning_section8_period1"></td>
+                            <td><input type="text" id="morning_section8_period2"></td>
+                            <td><input type="text" id="morning_section8_period3"></td>
+                            <td><input type="text" id="morning_section8_period4"></td>
+                            <td><input type="text" id="morning_section8_period5"></td>
+                            <td><input type="text" id="morning_section8_period6"></td>
+                            <td><input type="text" id="morning_section8_period7"></td>
+                            <td><input type="text" id="morning_section8_period8"></td>
+                            <td><input type="text" id="morning_section8_period9"></td>
+                        </tr>
+                        <tr>
+                            <td>Section 9</td>
+                            <td><input type="text" id="morning_section9_period1"></td>
+                            <td><input type="text" id="morning_section9_period2"></td>
+                            <td><input type="text" id="morning_section9_period3"></td>
+                            <td><input type="text" id="morning_section9_period4"></td>
+                            <td><input type="text" id="morning_section9_period5"></td>
+                            <td><input type="text" id="morning_section9_period6"></td>
+                            <td><input type="text" id="morning_section9_period7"></td>
+                            <td><input type="text" id="morning_section9_period8"></td>
+                            <td><input type="text" id="morning_section9_period9"></td>
+                        </tr>
+                    </table>
+                    
+                    <table id="dayRoutine">
+                        <tr>
+                            <td style="color: #fff;background-color: #464646;">DAY</td>
+                            <td>11:25-12:05</td>
+                            <td>12:05-12:45</td>
+                            <td>12:50-1:30</td>
+                            <td>1:30-2:10</td>
+                            <td>2:10-2:30</td>
+                            <td>2:30-3:10</td>
+                            <td>3:10-3:50</td>
+                            <td>3:55-4:35</td>
+                            <td>4:25-5:15</td>
+                        </tr>
+                        <tr>
+                            <td>Section 1</td>
+                            <td><input type="text" id="day_section1_period1"></td>
+                            <td><input type="text" id="day_section1_period2"></td>
+                            <td><input type="text" id="day_section1_period3"></td>
+                            <td><input type="text" id="day_section1_period4"></td>
+                            <td><input type="text" id="day_section1_period5"></td>
+                            <td><input type="text" id="day_section1_period6"></td>
+                            <td><input type="text" id="day_section1_period7"></td>
+                            <td><input type="text" id="day_section1_period8"></td>
+                            <td><input type="text" id="day_section1_period9"></td>
+                        </tr>
+                        <tr>
+                            <td>Section 2</td>
+                            <td><input type="text" id="day_section2_period1"></td>
+                            <td><input type="text" id="day_section2_period2"></td>
+                            <td><input type="text" id="day_section2_period3"></td>
+                            <td><input type="text" id="day_section2_period4"></td>
+                            <td><input type="text" id="day_section2_period5"></td>
+                            <td><input type="text" id="day_section2_period6"></td>
+                            <td><input type="text" id="day_section2_period7"></td>
+                            <td><input type="text" id="day_section2_period8"></td>
+                            <td><input type="text" id="day_section2_period9"></td>
+                        </tr>
+                        <tr>
+                            <td>Section 3</td>
+                            <td><input type="text" id="day_section3_period1"></td>
+                            <td><input type="text" id="day_section3_period2"></td>
+                            <td><input type="text" id="day_section3_period3"></td>
+                            <td><input type="text" id="day_section3_period4"></td>
+                            <td><input type="text" id="day_section3_period5"></td>
+                            <td><input type="text" id="day_section3_period6"></td>
+                            <td><input type="text" id="day_section3_period7"></td>
+                            <td><input type="text" id="day_section3_period8"></td>
+                            <td><input type="text" id="day_section3_period9"></td>
+                        </tr>
+                        <tr>
+                            <td>Section 4</td>
+                            <td><input type="text" id="day_section4_period1"></td>
+                            <td><input type="text" id="day_section4_period2"></td>
+                            <td><input type="text" id="day_section4_period3"></td>
+                            <td><input type="text" id="day_section4_period4"></td>
+                            <td><input type="text" id="day_section4_period5"></td>
+                            <td><input type="text" id="day_section4_period6"></td>
+                            <td><input type="text" id="day_section4_period7"></td>
+                            <td><input type="text" id="day_section4_period8"></td>
+                            <td><input type="text" id="day_section4_period9"></td>
+                        </tr>
+                        <tr>
+                            <td>Section 5</td>
+                            <td><input type="text" id="day_section5_period1"></td>
+                            <td><input type="text" id="day_section5_period2"></td>
+                            <td><input type="text" id="day_section5_period3"></td>
+                            <td><input type="text" id="day_section5_period4"></td>
+                            <td><input type="text" id="day_section5_period5"></td>
+                            <td><input type="text" id="day_section5_period6"></td>
+                            <td><input type="text" id="day_section5_period7"></td>
+                            <td><input type="text" id="day_section5_period8"></td>
+                            <td><input type="text" id="day_section5_period9"></td>
+                        </tr>
+                        
+                    </table>
                 </div>
             </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
    <script src="../nav/nav.js"></script>
+   <script src="routine.js"></script>
+
 </body>
 </html>
