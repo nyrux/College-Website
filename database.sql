@@ -43,6 +43,20 @@ CREATE TABLE users (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
+CREATE TABLE results (
+  id int(11) NOT NULL,
+  title varchar(250) NOT NULL,
+  data text NOT NULL,
+  grade varchar(5) NOT NULL,
+  datetime datetime(6) NOT NULL DEFAULT current_timestamp(6)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+ALTER TABLE results
+  ADD PRIMARY KEY (id);
+
+ALTER TABLE results
+  MODIFY id int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE actions
   ADD PRIMARY KEY (id);
 
