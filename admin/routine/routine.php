@@ -55,6 +55,7 @@ if(!isset($_SESSION['admin'])){
                 <a href="../userAuth/userAuth.php" class="nav-btn"><div><i class="fa-solid fa-user-tie"></i><span>User Verification</span></div></a>
                 <a href="../routine/routine.php" class="nav-btn"><div><i class="fa-solid fa-clipboard-list"></i><span>Update Routine</span></div></a>
                 <a href="../results/results.php" class="nav-btn"> <div><i class="fa-solid fa-newspaper"></i><span>Update Result</span></div></a>
+                <a href="../notices/notices.php" class="nav-btn"> <div><i class="fa-solid fa-database"></i><span>Notices</span></div></a>
                 <a href="../actions/actions.php" class="nav-btn"> <div><i class="fa-solid fa-database"></i><span>Actions Database</span></div></a>
             </div>
             <div class="logout-btn-cont">

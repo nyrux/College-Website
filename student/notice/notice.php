@@ -3,6 +3,9 @@ session_start();
 if(!isset($_SESSION['login'])){
     header("Location: ../../visitor/login_page/login.html");
 }
+require_once('../../php/config.php');
+$query = "SELECT * FROM notices ORDER BY datetime DESC"; 
+$result = $conn->query($query);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,14 +62,46 @@ if(!isset($_SESSION['login'])){
 
                 <div class="notice-cont">
                     <div class="notice">
-                        <div class="notice-title"></div>
+                        <div class="notice-title">Welcome to the Kantipur College Noticeboard</div>
                         <div class="notice-desc">
-                            
+                        </br>
+                        Stay updated with the latest announcements, events, and important notices. Here, you'll find:
+                        </br>
+                        </br>
+                        📢 College Notices & Announcements
+                        </br>
+                        📅 Event Schedules & Activities
+                        </br>
+                        📝 Exam Timetables & Results
+                        </br>
+                        📚 Academic Resources & Guidelines
+                        </br>
+                        🎓 Competitions, Workshops & Extracurricular Activities
+                        </br>
+                        </br>
+                        💡 Stay informed. Stay connected!
                         </div>
                     </div>
-                </div>
 
-                 </div>
+                    <?php
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            echo '<div class="notice-box">';
+                            echo '<h3 class="text-xl font-semibold text-cyan-500">' . htmlspecialchars($row['title']) . '</h3>';
+                            echo '<p><strong>Start Date:</strong> ' . $row['start_date'] . '</p>';
+                            echo '<p><strong>End Date:</strong> ' . $row['end_date'] . '</p>';
+                            if ($row['image']) {
+                                echo '<a href="../../uploads/' . $row['image'] . '"><img src="../../uploads/' . $row['image'] . '" alt="Notice Image" class="notice-image"></a>';
+                            }
+                            echo '</div>';
+                        }
+                    } else {
+                        echo '<p class="text-center text-gray-500">No notices found.</p>';
+                    }
+                    ?>
+                </div>
+                
+                </div>
             </div>
         </div>
 
