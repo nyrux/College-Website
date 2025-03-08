@@ -1,8 +1,5 @@
 <?php
 
-/* connecting to localhost server */
-
-
 $host = "localhost";
 $user = "root";
 $pass = "";

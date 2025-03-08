@@ -1,7 +1,11 @@
 <?php
 session_start();
 if(!isset($_SESSION['login'])){
-    header("Location: ../../visitor/login_page/login.html");
+    header('Location: ../../visitor/login_page/login.html');
+}
+if(isset($_GET['grades'])){
+    $grade = htmlspecialchars($_GET['grades']);
+    $grade_text = "Grade ".substr($grade, 0, 2)." Section ".substr($grade, 2, 1);
 }
 ?>
 <!DOCTYPE html>
@@ -11,7 +15,7 @@ if(!isset($_SESSION['login'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Stylesheet -->
-        <link rel="stylesheet" href="result.css">
+        <link rel="stylesheet" href="resultsheetstyle.css">
         <!-- Nav -->
         <link rel="stylesheet" href="../nav/nav.css">
         <title>Admin Panel</title>
@@ -44,8 +48,8 @@ if(!isset($_SESSION['login'])){
             </div>
         </div>
         <div class="container">
-        <div class="panel-top">
-                <div class="profile-cont">
+            <div class="panel-top">
+            <div class="profile-cont">
                     <img src="../../uploads/<?php echo $_SESSION['image']; ?>" class="profile-picture">
                     <div class="profile-name">
                         <div class="person-name"><?php echo $_SESSION['user'] ?></div>
@@ -59,30 +63,58 @@ if(!isset($_SESSION['login'])){
 
             
             <div class="panel-right">
-                   <div class="grade-cont">
-                       <div class="grade-title">grade 11</div>
-                            <div class="section-cont">
-                                <a href="../result/grades.php?grades=111"><div class="section-name">Section 1</div></a>
-                                <a href="../result/grades.php?grades=112"><div class="section-name">Section 2</div></a>
-                                <a href="../result/grades.php?grades=113"><div class="section-name">Section 3</div></a>
-                                <a href="../result/grades.php?grades=114"><div class="section-name">Section 4</div></a>
-                                <a href="../result/grades.php?grades=115"><div class="section-name">Section 5</div></a>
-                            </div>
-                    </div>
-                   <div class="grade-cont">
-                       <div class="grade-title">grade 12</div>
-                       <div class="section-cont">
-                        <a href="../result/grades.php?grades=121"><div class="section-name">Section 1</div></a>
-                        <a href="../result/grades.php?grades=122"><div class="section-name">Section 2</div></a>
-                        <a href="../result/grades.php?grades=123"><div class="section-name">Section 3</div></a>
-                        <a href="../result/grades.php?grades=124"><div class="section-name">Section 4</div></a>
-                        <a href="../result/grades.php?grades=125"><div class="section-name">Section 5</div></a>
-                    </div>
-                    </div>
+                <div class="table-title"><?php echo $grade_text; ?></div>
+                <?php
+                require_once('../../php/config.php');
+                $sql = "SELECT id, title, data, datetime FROM results WHERE grade = ? ORDER BY id DESC";
+
+$stmt = $conn->prepare($sql);
+$stmt -> bind_param("s", $grade);
+$stmt -> execute();
+$result = $stmt->get_result();
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $data = json_decode($row["data"], true);
+
+        echo "<span class='titles' style='display: block; text-align: center; margin-bottom: 20px;'>";
+        echo "<h3 style='font-size: 24px; color: #333;'>".$row['title']."</h3><p style='font-size: 16px; color: #888;'>".$row['datetime']."</p></span>";
+
+        if (!empty($data)) {
+            echo "<table border='0' cellspacing='0' cellpadding='10' style='margin: 0 auto; width: 80%; border-collapse: collapse; background-color: #f9f9f9; box-shadow: 0 2px 5px rgba(0,0,0,0.1);'>";
+
+            // Column headers
+            echo "<tr style='background-color: #4CAF50; color: white; text-align: center;'>";
+            foreach ($data[0] as $header) {
+                echo "<th style='padding: 12px; font-weight: bold;'>" . htmlspecialchars($header) . "</th>";
+            }
+            echo "</tr>";
+
+            // Data rows
+            for ($i = 1; $i < count($data); $i++) {
+                echo "<tr style='text-align: center;'>";
+                foreach ($data[$i] as $cell) {
+                    echo "<td style='padding: 8px;'>" . htmlspecialchars($cell) . "</td>";
+                }
+                echo "</tr>";
+            }
+
+            echo "</table>";
+        }
+
+        echo "<hr style='border: 1px solid #ddd; margin-top: 20px;'>";
+    }
+} else {
+    echo "<p style='text-align: center; font-size: 18px; color: #888;'>No records found.</p>";
+}
+?>
+
+                
+                
             </div>
             </div>
         </div>
 
-    <script src="../nav/nav.js"></script>
+    <script src="../../nav/nav.js"></script>
+
 </body>
 </html>
