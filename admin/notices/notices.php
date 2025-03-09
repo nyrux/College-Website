@@ -38,7 +38,7 @@ $result = $conn->query($query);
     <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm hidden transition-opacity duration-300">
         <div class="bg-white p-8 rounded-xl shadow-2xl w-[400px] border border-cyan-400 transform scale-95 transition-transform duration-300">
             <h2 class="text-2xl font-bold mb-6 text-cyan-500 text-center">New Notice</h2>
-            <form action="insert_notice.php" method="post" class="space-y-5" enctype="multipart/form-data">
+            <form action="insert_event.php" method="post" class="space-y-5" enctype="multipart/form-data">
                 <input type="text" name="title" placeholder="Enter notice title" class="w-full p-3 rounded-lg bg-gray-100 text-gray-900 border border-gray-300 focus:ring-2 focus:ring-cyan-400 focus:outline-none" required>
                 <input type="date" name="start_date" placeholder="Start Date" class="w-full p-3 rounded-lg bg-gray-100 text-gray-900 border border-gray-300 focus:ring-2 focus:ring-cyan-400 focus:outline-none" required>
                 <span>Event start Date</span>
@@ -46,6 +46,21 @@ $result = $conn->query($query);
                 <span>Event End Date</span>
                 <input type="file" name="image" accept="image/*" class="w-full p-3 rounded-lg bg-gray-100 text-gray-900 border border-gray-300 focus:ring-2 focus:ring-cyan-400 focus:outline-none" required>
 
+                <!-- Buttons -->
+                <div class="flex justify-between mt-4">
+                    <button type="button" onclick="closeModal()" class="w-1/3 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">Cancel</button>
+                    <button type="submit" class="w-1/2 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="noticeModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm hidden transition-opacity duration-300">
+        <div class="bg-white p-8 rounded-xl shadow-2xl w-[400px] border border-cyan-400 transform scale-95 transition-transform duration-300">
+            <h2 class="text-2xl font-bold mb-6 text-cyan-500 text-center">New Notice</h2>
+            <form action="insert_notice.php" method="post" class="space-y-5" enctype="multipart/form-data">
+                <input type="text" name="title" placeholder="Enter notice title" class="w-full p-3 rounded-lg bg-gray-100 text-gray-900 border border-gray-300 focus:ring-2 focus:ring-cyan-400 focus:outline-none" required>
+                <textarea id="description" name="description" class="w-full p-3 rounded-lg bg-gray-100 text-gray-900 border border-gray-300 focus:ring-2 focus:ring-cyan-400 focus:outline-none">Write description here.</textarea>
                 <!-- Buttons -->
                 <div class="flex justify-between mt-4">
                     <button type="button" onclick="closeModal()" class="w-1/3 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">Cancel</button>
@@ -91,27 +106,45 @@ $result = $conn->query($query);
             <div class="panel-right">
                 <div class="panel-head">
                     <div class="panel-title">Notices</div>
-                    <button onclick="openModal()" class="w-10 h-10 flex items-center justify-center border-2 border-gray-500 text-gray-500 rounded-lg bg-transparent hover:bg-gray-100 transition-all duration-300 p-2">
-                        <span class="text-3xl font-bold">+</span>
+                    <span class="flex">
+                    <button onclick="openModal()" class="flex items-center justify-center border-2 border-gray-500 text-gray-500 rounded-lg bg-transparent hover:bg-gray-100 transition-all duration-300 p-2">
+                        <span class="font-bold">Add Events</span>
                     </button>
+                    <button onclick="noticeModal()" class="flex items-center justify-center border-2 border-gray-500 text-gray-500 rounded-lg bg-transparent hover:bg-gray-100 transition-all duration-300 p-2">
+                        <span class="font-bold">Add Notice</span>
+                    </button>
+                    </span>
                 </div>
 
                 <div class="notices-list">
                     <?php
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
-                            echo '<div class="notice-box">';
-                            echo '<h3 class="text-xl font-semibold text-cyan-500">' . htmlspecialchars($row['title']) . '</h3>';
-                            echo '<p><strong>Start Date:</strong> ' . $row['start_date'] . '</p>';
-                            echo '<p><strong>End Date:</strong> ' . $row['end_date'] . '</p>';
-                            if ($row['image']) {
-                                echo '<a href="../../uploads/' . $row['image'] . '"><img src="../../uploads/' . $row['image'] . '" alt="Notice Image" class="notice-image"></a>';
+                            if($row['type'] === "event"){
+                                echo '<div class="event-box">';
+                                echo '<h3 class="text-xl font-semibold text-cyan-500">' . htmlspecialchars($row['title']) . '</h3>';
+                                echo '<p><strong>Start Date:</strong> ' . $row['start_date'] . '</p>';
+                                echo '<p><strong>End Date:</strong> ' . $row['end_date'] . '</p>';
+                                if ($row['image']) {
+                                    echo '<a href="../../uploads/' . $row['image'] . '"><img src="../../uploads/' . $row['image'] . '" alt="Notice Image" class="notice-image"></a>';
+                                }
+                                echo '<form action="delete_notice.php" method="POST" class="mt-3">'; // Form for delete
+                                echo '<input type="hidden" name="notice_id" value="' . $row['id'] . '">'; // Hidden input with notice ID
+                                echo '<button type="submit" class="delete-btn text-red-500 hover:text-red-700">Delete</button>'; // Delete button
+                                echo '</form>';
+                                echo '</div>';
                             }
-                            echo '<form action="delete_notice.php" method="POST" class="mt-3">'; // Form for delete
-                            echo '<input type="hidden" name="notice_id" value="' . $row['id'] . '">'; // Hidden input with notice ID
-                            echo '<button type="submit" class="delete-btn text-red-500 hover:text-red-700">Delete</button>'; // Delete button
-                            echo '</form>';
-                            echo '</div>';
+                            else{
+                                echo '<div class="notice">';
+                                echo '<h3 class="notice-title text-xl font-semibold text-cyan-500">' . htmlspecialchars($row['title']) . '</h3>';
+                                echo '<div class="notice-desc">'.htmlspecialchars($row['description']).'</div>';
+                                echo '<form action="delete_notice.php" method="POST" class="mt-3">'; // Form for delete
+                                echo '<input type="hidden" name="notice_id" value="' . $row['id'] . '">'; // Hidden input with notice ID
+                                echo '<button type="submit" class="delete-btn text-red-500 hover:text-red-700">Delete</button>'; // Delete button
+                                echo '</form>';
+                                echo '</div>';
+                            }
+                            
                         }
                     } else {
                         echo '<p class="text-center text-gray-500">No notices found.</p>';
@@ -127,9 +160,14 @@ $result = $conn->query($query);
         function openModal() {
             document.getElementById("modal").classList.remove("hidden");
         }
+        function noticeModal() {
+            document.getElementById("noticeModal").classList.remove("hidden");
 
+        }
         function closeModal() {
             document.getElementById("modal").classList.add("hidden");
+            document.getElementById("noticeModal").classList.add("hidden");
+
         }
     </script>
     <script src="../nav/nav.js"></script>

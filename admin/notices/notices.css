@@ -144,7 +144,7 @@ input[type="text"]{
 }
 
 /* Style for each notice box */
-.notice-box {
+.event-box {
     width: 100%;
     height: 300px; /* Set height to make it a square */
     background-color: #f0f0f0;
@@ -159,7 +159,7 @@ input[type="text"]{
 }
 
 /* Hover effect for the notice box */
-.notice-box:hover {
+.event-box:hover {
     transform: scale(1.05);
 }
 

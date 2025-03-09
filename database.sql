@@ -23,6 +23,33 @@ CREATE TABLE admissions_data (
   status varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+CREATE TABLE codes (
+  id int(6) NOT NULL,
+  email varchar(255) NOT NULL,
+  code int(10) NOT NULL,
+  status varchar(50) NOT NULL,
+  datetime datetime(6) NOT NULL DEFAULT current_timestamp(6)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+CREATE TABLE notices (
+  id int(6) NOT NULL,
+  title varchar(50) NOT NULL,
+  start_date varchar(10) DEFAULT NULL,
+  end_date varchar(10) DEFAULT NULL,
+  image varchar(255) DEFAULT NULL,
+  type varchar(50) NOT NULL,
+  description text DEFAULT NULL,
+  datetime timestamp(6) NOT NULL DEFAULT current_timestamp(6)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+CREATE TABLE results (
+  id int(11) NOT NULL,
+  title varchar(250) NOT NULL,
+  data text NOT NULL,
+  grade varchar(5) NOT NULL,
+  datetime datetime(6) NOT NULL DEFAULT current_timestamp(6)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
 CREATE TABLE `routine` (
   id int(11) NOT NULL,
   data text NOT NULL,
@@ -43,24 +70,19 @@ CREATE TABLE users (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
-CREATE TABLE results (
-  id int(11) NOT NULL,
-  title varchar(250) NOT NULL,
-  data text NOT NULL,
-  grade varchar(5) NOT NULL,
-  datetime datetime(6) NOT NULL DEFAULT current_timestamp(6)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
-ALTER TABLE results
-  ADD PRIMARY KEY (id);
-
-ALTER TABLE results
-  MODIFY id int(11) NOT NULL AUTO_INCREMENT;
-
 ALTER TABLE actions
   ADD PRIMARY KEY (id);
 
 ALTER TABLE admissions_data
+  ADD PRIMARY KEY (id);
+
+ALTER TABLE codes
+  ADD PRIMARY KEY (id);
+
+ALTER TABLE notices
+  ADD PRIMARY KEY (id);
+
+ALTER TABLE results
   ADD PRIMARY KEY (id);
 
 ALTER TABLE routine
@@ -74,6 +96,15 @@ ALTER TABLE actions
   MODIFY id int(11) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE admissions_data
+  MODIFY id int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE codes
+  MODIFY id int(6) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE notices
+  MODIFY id int(6) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE results
   MODIFY id int(11) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE routine

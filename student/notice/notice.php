@@ -86,14 +86,13 @@ $result = $conn->query($query);
                     <?php
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
-                            echo '<div class="notice-box">';
-                            echo '<h3 class="text-xl font-semibold text-cyan-500">' . htmlspecialchars($row['title']) . '</h3>';
-                            echo '<p><strong>Start Date:</strong> ' . $row['start_date'] . '</p>';
-                            echo '<p><strong>End Date:</strong> ' . $row['end_date'] . '</p>';
-                            if ($row['image']) {
-                                echo '<a href="../../uploads/' . $row['image'] . '"><img src="../../uploads/' . $row['image'] . '" alt="Notice Image" class="notice-image"></a>';
+                            if($row['type'] === "notice"){
+                                echo '<div class="notice">';
+                                echo '<h3 class="notice-title text-xl font-semibold text-cyan-500">' . htmlspecialchars($row['title']) . '</h3>';
+                                echo '<div class="notice-desc">'.htmlspecialchars($row['description']).'</div>';
+                                echo '</div>';
                             }
-                            echo '</div>';
+                                
                         }
                     } else {
                         echo '<p class="text-center text-gray-500">No notices found.</p>';

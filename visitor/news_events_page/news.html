@@ -227,5 +227,48 @@
 
     <script src="news.js"></script>
     <script src="../utilities/navbar/navbar.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    // Fetch events using AJAX
+    $.ajax({
+    url: 'fetch_events.php', // PHP file that fetches the data
+    method: 'GET',
+    dataType: 'json',
+    success: function(data) {
+        // Loop through the events and create HTML elements
+        data.forEach(event => {
+            const start_date = new Date(event.start_date);
+            const end_date = new Date(event.end_date);
+            
+            // Format for the event box
+            const eventBox = `
+                <div class="info-box event-box" style="background-image: url('../../uploads/${event.image}');">
+                    <div class="info-desc-cont event-desc">
+                        <div class="info-title">${event.title}</div>
+                        <div class="info-date">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>${formatDate(start_date)} to ${formatDate(end_date)}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+            $('.news-events-wrapper').append(eventBox);
+        });
+    }
+});
+
+
+    // Function to format the date (adjust based on how you want to display it)
+    function formatDate(date) {
+        const year = date.getFullYear();
+        const month = ("0" + (date.getMonth() + 1)).slice(-2);
+        const day = ("0" + date.getDate()).slice(-2);
+        return `${year}-${month}-${day}`;
+    }
+});
+</script>
+
 </body>
 </html>

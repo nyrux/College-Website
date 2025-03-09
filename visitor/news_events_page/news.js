@@ -62,7 +62,8 @@ const showEvents = () => {
     });
 };
 
-// Add event listeners to buttons
 allBtn.addEventListener('click', showAll);
 newsBtn.addEventListener('click', showNews);
 eventBtn.addEventListener('click', showEvents);
+
+
