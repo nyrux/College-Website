@@ -1,0 +1,212 @@
+
+.panel-right{
+    height: 80vh;
+    width: 100%;
+    border-radius: var(--panelRadius);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: var(--panelGap);
+}
+.admission-rqst-cont, .user-rqst-cont{
+    display: flex;
+    flex-direction: column;
+    gap: var(--panelGap);
+    padding: var(--panelGap);
+    height:80vh;
+    width: auto;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    background-color: var(--panelBg);
+    border-radius: var(--panelRadius);
+}
+.panel-title{
+    font-size: 1.25em;
+    text-align: center;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rqst-num{
+    font-size: .6em;
+    font-weight: normal;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgb(235, 235, 235);
+}
+.admission-rqst{
+    flex: 0 0 70vh;
+    width: 100%;
+    background-color: var(--panelBoxBg);
+    border-radius: var(--panelRadius);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.applicant-profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 20px;
+}
+.applicant-name{
+    margin-top: 2vh;
+}
+.applicant-img{
+    height: 20vh;
+    width: 20vh;
+    border-radius: 50%;
+    background-position: center;
+    background-size: 100% 100%;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsEJHmI0MlIGvH9CYkbsLEWQ5_ee8Qtl5V-Q&s');
+}
+table{
+    border-collapse: collapse;
+}
+th,td{
+    font-weight: normal;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    width: 100px;
+    text-align: center;
+    font-size: .8em;
+    padding: 1vh;
+}
+td{
+    border-bottom: none;
+}
+th:nth-child(3),td:nth-child(3){
+    border-right: none;
+}
+.action-btn-cont{
+    display: flex;
+    gap: 5vh;
+}
+.action-btn{
+    width: 21vh;
+    border: none;
+    padding: 2vh 0vh;
+    cursor: pointer;
+    border-radius: 1vh;
+}
+.accept-btn{
+    color: green;
+    border: 1px solid green;
+}
+.reject-btn{
+    color: red;
+    border: 1px solid red;
+}
+.accept-btn:hover{
+    color: #fff;
+    background-color: green;
+    transition: .25s ease;
+}
+.reject-btn:hover{
+    color: #fff;
+    background-color: red;
+    transition: .25s ease;
+}
+.std-rqst-panel{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: var(--panelGap);
+    gap: var(--panelGap);
+    background-color: var(--panelBg);
+    border-radius: var(--panelRadius);
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+.std-rqst-cont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--panelGap);
+}
+.std-rqst {
+    height: 25vh;
+    width: 100%;
+    border-radius: 2vh;
+    background-color: var(--panelBoxBg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: .8em;
+}
+
+.std-img {
+    height: 10vh;
+    width: 10vh;
+    border-radius: 1vh; /* Instead of 50%, giving it slightly rounded edges */
+    background-position: center;
+    background-size: cover;
+}
+
+.std-action-btns-cont{
+    display: flex;
+    flex-direction: row;
+    gap: 2vh;
+}
+.std-action-btn{
+    border: none;
+    text-align: center;
+    height: 6vh;
+    width: 6vh;
+    font-size: .8em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.fa-x,.fa-check{
+    width: 100%;
+}
+.tch-img{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR92tISuiB0LamCKjLXHlkMLIPVZa9J_44UVg&s');
+}
+.user-accept-btn{
+    background-color: #fff;
+    color: #00b400;
+}
+.user-reject-btn{
+    background-color: #fff;
+    color: #f00;
+}
+
+@media(max-width:1135px){
+    .applicant-img{
+        height: 16vh;
+        width: 16vh;
+    }
+    .applicant-profile{
+        font-size: .8em;
+    }
+    table{
+        font-size: .9em;
+    }
+    th,td{
+        padding: 5px 0;
+    }
+    .action-btn{
+        padding: 8px 0px;
+        width: 18vh;
+    }
+    .std-action-btn{
+        height: 5vh;
+        width: 5vh;
+        font-size: .6em;
+    }
+    .icons-cont{
+        font-size: .9em;
+    }
+}
+@media(max-width:768px){
+    .panel-right{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+    }
+}

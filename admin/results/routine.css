@@ -1,0 +1,111 @@
+.nav-btns-cont .nav-btn:nth-child(1){
+    background-color: #fff !important;
+    color: #000 !important;
+}
+.nav-btns-cont .nav-btn:nth-child(1):hover{
+    background-color: #000 !important;
+    color: #fff !important;
+}
+.nav-btns-cont .nav-btn:nth-child(5){
+    background-color: #000;
+    color: #fff;
+}
+
+
+.panel-right{
+    height: 80vh;
+    width: 100%;
+    background-color: var(--panelBg);
+    border-radius: var(--panelRadius);
+    padding: var(--panelGap);
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+.panel-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vh 2vh;
+    margin-bottom: 20px;
+}
+
+.titles{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vh 2vh;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.panel-title{
+    font-size: 1.25em;
+    font-weight: 500;
+}
+.config-btns-cont{
+    display: flex;
+    justify-content: flex-end;
+    gap: 2vh;
+    font-size: 1.25em;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.upload-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+input[type="file"], .grade_section {
+    display: block;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.custom-file-upload:hover {
+    background: #0056b3;
+}
+button[type="submit"] {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+input[name="title"]{
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+button[type="submit"]:hover {
+    background: #218838;
+}
+#close{
+    color: red;
+    font-size: 30px;
+}
