@@ -1,0 +1,177 @@
+/* Poster------------------------------------ */
+.poster-text-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.courses-poster-text{
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+.poster-desc{
+    color: #fff;
+    text-align: justify;
+    font-size: .9em;
+    width: 70%;
+    padding: 4vh 0vh;
+}
+@media(max-width:992px){
+    .courses-poster-text{
+        font-size: 2em;
+    }
+}
+@media(max-width:768px){
+    .poster-desc{
+        font-size: .5em;
+    }
+}
+@media(max-width:576px){
+    .courses-poster-text{
+        font-size: 1.15em;
+    }
+    .poster-desc{
+        font-size: .6em;
+    }
+}
+
+/* Courses ---------------------------------------------------- */
+
+.our-course-wrapper{
+    height: fit-content;
+    width: 100%;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+}
+.intrest-title{
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #5a5a5a;
+    text-align: center;
+}
+.course-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    width: 70%;
+    gap: 5vh;
+}
+.course-box{
+    height: 90vh;
+    width: auto;
+    display: grid;
+    grid-template-rows: 6fr 1fr 3fr 1fr 1fr;
+    box-shadow: 0px 0px 10px 0px rgb(211, 211, 211);
+    border-radius: 1vh;
+    padding: 2vh;
+    padding-bottom: 2vh;
+}
+.course-image,.course-title,
+.course-desc,.course-btn-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.course-image{
+    background-position: center;
+    background-size: 100% 100%;
+}
+.crs-img-1{
+    background-image: url('https://www.padmashreecollege.edu.np/storage/programs/1693385252bit.webp');
+}
+.crs-img-2{
+    background-image: url('https://scontent.fbir1-1.fna.fbcdn.net/v/t1.6435-9/65657530_2361692110575113_6747965599990677504_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=_a7sYgl3VtIQ7kNvgG0Debj&_nc_oc=AdjtOmdSh62IuuSgtF35fpQKH1dypwpaVAYhQJxmNWcFKmzyXS7grKrTQpOudo4P5Z0&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=A8pBxrJxc_0MaPHdf0o8a77&oh=00_AYC49J7N9bmsL8LcXuW899jXmMwoEayaqhgJN64PM1h-fQ&oe=67D7CA37');
+}
+.crs-img-3{
+    background-image: url('https://skillcampusnepal.com/wp-content/uploads/2022/10/2-small.jpg');
+}
+.crs-img-4{
+    background-image: url('https://www.cihhm.com/wp-content/uploads/2023/12/WhatsApp-Image-2023-12-27-at-10.58.31-AM-1024x774.jpeg');
+}
+.course-title{
+    font-weight: 500;
+    color: #fff;
+    width: 70%;
+    transform: translate(20%,-50%);
+    height: 12vh;
+}
+.course-grid .course-box:nth-child(1) .course-title{
+    background-color: rgb(9, 89, 136);
+}
+.course-grid .course-box:nth-child(2) .course-title{
+    background-color: rgb(136, 60, 9);
+}
+.course-grid .course-box:nth-child(3) .course-title{
+    background-color: rgb(9, 136, 66);
+}
+.course-grid .course-box:nth-child(4) .course-title{
+    background-color: rgb(136, 9, 9);
+}
+.course-desc{
+    font-size: .9em;
+    text-align: justify;
+    color: var(--descColor);
+    padding: 0vh 2vh;
+}
+.course-dtl-cont{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--descColor);
+    font-size: .8em;
+    padding: 2vh;
+    gap: 2vh;
+}
+.course-dtl{
+    width: 100%;
+    border-right: 1px solid black;
+}
+.course-dtl:last-child{
+    border-right: none;
+}
+.enroll-btn{
+    border: none;
+    background-color: rgb(22, 137, 214);
+    height: 100%;
+    width: 25vh;
+    color: #fff;
+    border-radius: 5px;
+    height: 6vh;
+}
+.enroll-btn:hover{
+    transform: scale(1.1,1.1);
+    transition: .25s ease;
+    cursor: pointer;
+}
+@media(max-width:992px){
+    .course-grid{
+        grid-template-columns: none;
+        grid-template-rows: repeat(4,1fr);
+    }
+    .intrest-title{
+        font-size: 1.75em;
+    }
+}
+@media(max-width:576px){
+    .course-grid{
+        width: 90%;
+    }
+    .course-title{
+        height: 8vh;
+        font-size: .8em;
+    }
+    .course-desc{
+        font-size: .7em;
+    }
+    .intrest-title{
+        font-size: 1.5em;
+    }
+    .course-dtl{
+        font-size: .7em;
+    }
+}

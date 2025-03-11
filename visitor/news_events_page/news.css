@@ -1,0 +1,185 @@
+.poster-text-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+.news-poster-text{
+    font-size: 2.5em;
+    font-weight: 700;
+}
+.poster-news-desc{
+    text-align: justify;
+    font-size: .9em;
+    width: 70%;
+    padding: 4vh 0vh;
+}
+@media(max-width:992px){
+    .news-poster-text{
+        font-size: 1.5em;
+    }
+}
+@media(max-width:768px){
+    .poster-news-desc{
+        font-size: .8em;
+    }
+}
+@media(max-width:576px){
+    .news-poster-text{
+        font-size: 1.15em;
+    }
+    .poster-news-desc{
+        font-size: .5em;
+    }
+}
+
+/* News & Events Section -------------------------------------------------- */
+
+.news-event-title{
+    margin-top: 10vh;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #2a5fa5;
+    padding-bottom: 4vh;
+}
+.info-btn-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    padding: 4vh 0vh;
+}
+.info-btn{
+    height: 10vh;
+    width: 28vh;
+    font-size: 1.1em;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+.all-btn{
+    background-color: #34b314;
+    color: #fff;
+    border: none;
+}
+
+.news-events-wrapper{
+    height: fit-content;
+    width: 100%;
+    padding: 2vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(auto,1fr);
+    gap: 15vh;
+    padding: 15vh;
+}
+.info-box{
+    height: 65vh;
+    width: auto;
+    background-position: center;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+}
+.news-events-wrapper .info-box:nth-child(1){
+    background-image: url('https://radiant.edu.np/wp-content/uploads/2020/03/exam-rep-image-1552326071-1564828101.jpg');
+}
+.news-events-wrapper .info-box:nth-child(2){
+    background-image: url('https://static.vecteezy.com/system/resources/previews/024/029/147/non_2x/pile-of-paperwork-or-unfinished-documents-stacked-on-office-desk-with-computer-created-by-generative-ai-technology-photo.jpg');
+}
+.news-events-wrapper .info-box:nth-child(3){
+    background-image: url('https://img.freepik.com/free-vector/hand-drawn-flat-winter-people-collection_23-2149147655.jpg?semt=ais_hybrid-rr-similar');
+}
+.news-events-wrapper .info-box:nth-child(4){
+    background-image: url('https://bicnepal.edu.np/storage/56/01HTM6B8NZST5HQK8TMH40RS8V.jpg');
+}
+.news-events-wrapper .info-box:nth-child(5){
+    background-image: url('https://bicnepal.edu.np/storage/114/CdIxinSvHxIDgARNwEO0qGidExP63d-metaRFNDMDMxODhfMTF6b24uanBn-.jpg');
+}
+
+.info-desc-cont{
+    color: #fff;
+    background-color: #2a5fa5;
+    height: 15vh;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vh;
+    transform: translateY(60vh);
+    border-radius: 1vh;
+}
+.info-title{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.fa-calendar-days{
+    margin-right: 2vh;
+}
+.event-desc{
+    background-color: #cfa310;
+}
+
+@media(max-width:992px){
+    .news-events-wrapper{
+        padding: 8vh;
+        row-gap: 15vh;
+        column-gap: 5vh;
+    }
+    .info-box{
+        height: 55vh;
+    }
+    .info-title{
+        font-size: 1em;
+    }
+    .info-date{
+        font-size: .8em;
+    }
+    .info-desc-cont{
+        height: 13vh;
+        width: 70%;
+        transform: translateY(50vh);
+    }
+}
+@media(max-width:768px){
+    .news-event-title{
+        font-size: 1.785em;
+    }
+    .info-btn{
+        height: 8vh;
+        width: 20vh;
+    }
+    .news-events-wrapper{
+        grid-template-columns: none;
+        grid-template-rows: repeat(auto,1fr);
+    }
+    .event-desc,.news-desc{
+        font-size: .8em;
+    }
+}
+@media(max-width:576px){
+    .news-events-wrapper{
+        padding: 5vh 2vh;
+    }
+    .info-btn-cont{
+        gap: 2vh;
+    }
+    .news-event-title{
+        font-size: 1.25em;
+    }
+    .info-btn{
+        font-size: .8em;
+        width: 15vh;
+        height: 6vh;
+    }
+    .info-box{
+        height: 50vh;
+    }
+    .info-desc-cont{
+        transform: translateY(45vh);
+    }
+}

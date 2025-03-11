@@ -1,0 +1,217 @@
+.poster-text-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+.life-poster-text{
+    font-size: 2.5em;
+    font-weight: 700;
+}
+.life-desc{
+    text-align: justify;
+    font-size: .9em;
+    width: 70%;
+    padding: 4vh 0vh;
+}
+@media(max-width:992px){
+    .life-poster-text{
+        font-size: 2em;
+    }
+}
+@media(max-width:768px){
+    .life-desc{
+        font-size: .7em;
+    }
+}
+@media(max-width:576px){
+    .life-poster-text{
+        font-size: 1.15em;
+    }
+    .life-desc{
+        font-size: .5em;
+    }
+}
+
+/* Life Section */
+
+.life-title{
+    color: rgb(12, 93, 160);
+    font-size: 2.5em;
+    font-weight: 600;
+    text-align: center;
+    padding: 5vh 0vh;
+}
+.life-wrapper{
+    height: fit-content;
+    width: 100%;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4vh;
+    gap: 4vh;
+}
+.about-event-cont{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.788);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    transform: translateY(100%);
+    transition: transform .5s ease;
+}
+.event-name,.event-date,.event-desc{
+    padding: 1vh;
+    color: #fff;
+}
+.event-name{
+    border-bottom: 4px solid var(--secThemeColor);
+    font-size: 1.25em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.fa-calendar-days{
+    margin-right: 2vh;
+}
+.event-date{
+    font-size: .8em;
+}
+.event-desc{
+    font-size: .8em;
+    width: 70%;
+    text-align: justify;
+}
+.row-1{
+    height: 70vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4vh;
+}
+.row-2{
+    height: 60vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 4vh;
+}
+.row-3{
+    height: 50vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 4vh;
+}
+.life-img{
+    height: auto;
+    width: auto;
+    background-position: center;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+.life-img-1 {
+    background-image: url('https://penntoday.upenn.edu/sites/default/files/2022-04/P-101188-Master-V1-038X.jpg');
+}
+
+.life-img-2 {
+    background-image: url('https://www.icp.edu.np/storage/lifeAtIcp/7-10-upload7.jpg');
+}
+
+.life-img-3 {
+    background-image: url('https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/462677232_927581736070713_3899472696311018553_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=NimrB3lm38cQ7kNvgHpaxKA&_nc_oc=AdhXVsbdGJj0ac-h_pENHqhy4Ua4Scd5ROdQZZoSHXvWY0tBH8AurbLhzX5daM_SF7A&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=AGKd4BwLcLZTRlPg80q3_3M&oh=00_AYBxtGtCaumhWA5j6ZjqtxRaYCIj0PM6xjNd5VRFlTvhzQ&oe=67B66356');
+}
+
+.life-img-4 {
+    background-image: url('https://heraldcollege.edu.np/storage/uploads/Copy%20of%20SLS_9723_1671097439.JPG');
+}
+
+.life-img-5 {
+    background-image: url('https://i.ytimg.com/vi/0K5n-Oc9Vvs/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCysJI-mr97g-HStdv8WrnFZZDnRw');
+}
+
+.life-img-6 {
+    background-image: url('https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/328444695_984314809618753_3778210482052028943_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=ED4Zupf0hZgQ7kNvgH3XdDS&_nc_oc=AdiLCd0dOWmGMM7h0UxlvJqbQekPolwI-fQ5cfUxpRM5ErM0p-6wr5D3wzL5as6GPEE&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=AyF_ndH4oRmvvJWhCc_jCaQ&oh=00_AYAsKxS7P4tRll9agyibUv-6_Ailuw4vB6-aytvRzxCS3w&oe=67B6378D');
+}
+
+.life-img-7 {
+    background-image: url('https://scontent.fbir1-1.fna.fbcdn.net/v/t1.6435-9/121262997_3463074813760676_68727218559518586_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LNwY1GYZzP4Q7kNvgHOrcJN&_nc_oc=AdgXAmpQ-7P-hJKhgXT748ZT3oNVTXYOYAUsIyWuFG141kDhKceV8nhT4-YyMnoKMnY&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=A6P4UdF0VYmwR4fzrF1Dlam&oh=00_AYDjw4SzwDCSw8w3_RYFDQI6ZoXMgSdqxPPo4obhEsS2ag&oe=67D7D04B');
+}
+
+@media(max-width:992px){
+    .row-1{
+        height: 60vh;
+    }
+    .event-desc,.event-date{
+        font-size: .7em;
+    }
+    .row-3{
+        height: fit-content;
+    }
+    .life-img-5{
+        grid-column: 1/4;
+        height: 60vh;
+    }
+    .life-img-6{
+        grid-column: 1/3;
+    }
+}
+@media(max-width:768px){
+    .row-1{
+        height: fit-content;
+    }
+    .life-title{
+        font-size: 2em;
+        padding: 2vh 0vh;
+    }
+    .life-img-1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        height: 60vh;
+    }
+    .life-img-2{
+        grid-row: 2/3;
+        grid-column: 1/3;
+        height: 50vh;
+    }
+    .event-name{
+        font-size: 1em;
+    }
+    .event-desc,.event-date{
+        font-size: .7em;
+    }
+    .row-2{
+        height: 50vh;
+    }
+    .life-img-5,.life-img-6,.life-img-7{
+        height: 50vh;
+    }
+    .row-3{
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media(max-width:576px){
+    .life-title{
+        font-size: 1.15em;
+        padding: 0vh;
+    }
+    .row-2{
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .life-img{
+        height: 50vh;
+    }
+}

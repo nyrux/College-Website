@@ -1,0 +1,716 @@
+:root{
+    --commitIconColor : #1061ac;
+    --commitTitleColor : #135492;
+    --commitBgColor : #ebf0f3;
+}
+/* Poster */
+.advert-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.about-college-text{
+    width: 100%;
+}
+.about-text,.college-text,.about-paragraph{
+    padding-left: 6vh;
+    color: var(--textColor);
+}
+.about-text{
+    font-weight: 700;
+   font-size: 3em;
+}
+.college-text{
+    font-weight: 300;
+    font-size: 2em;
+}
+.about-paragraph{
+    padding: 6vh;
+    text-align: justify;
+    font-size: .85em;
+    font-weight: 300;
+}
+/* Welome section */
+.welcome-wrapper{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(233, 233, 233);
+    padding-top: 10vh;
+}
+.welcome-title-cont{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(70, 70, 70);
+}
+.welcome-text{
+    font-size: 3em;
+    font-weight: 600;
+}
+.college-name{
+    font-size: 1.75em;
+    font-weight: 300;
+}
+.welcome-paragraph-cont{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.welcome-paragraph{
+    width: 60%;
+    text-align: justify;
+    color: rgb(48, 48, 48);
+}
+/* Welcome section responsive */
+@media(max-width:992px){
+    .about-text{
+        font-size: 2.5em;
+        font-weight: 600;
+    }
+    .college-text{
+        font-size: 1.25em;
+    }
+    .about-paragraph{
+        font-size: .8em;
+        padding: 1vh 2vh;
+    }
+    .banner-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px){
+    .welcome-paragraph{
+        width: 70%;
+        font-size: .85em;
+    }
+    .about-paragraph{
+        font-size: .6em;
+    }
+    .wrapper{
+        width: 90%;
+    }
+}
+@media (max-width:576px){
+    .welcome-wrapper{
+        padding-top: 8vh;
+    }
+    .welcome-text{
+        font-size: 2.25em;
+    }
+    .college-name{
+        font-size: 1.25em;
+    }
+    .college-text{
+        font-size: 1em;
+    }
+    .about-paragraph{
+        text-align: justify;
+        font-size: .5em;
+    }
+    .about-text{
+        font-size: 1.75em;
+    }
+}
+
+/* Commitments Section--------------------------------------------------- */
+
+.commitments-wrapper{
+    height: fit-content;
+    width: 100%;
+    padding: 10vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10vh;
+}
+.commitment-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: auto;
+    background-color: var(--commitBgColor);
+    gap: 5vh;
+}
+.commit-icon-cont{
+    height: 15vh;
+    width: 15vh;
+    border-radius: 50%;
+    background-color: var(--commitIconColor);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+.commit-title{
+    font-size: 1.75em;
+    color: var(--commitTitleColor);
+    font-weight: 500;
+}
+.commit-desc{
+    width: 70%;
+    text-align: justify;
+    color: var(--descColor);
+    font-size: .9em;
+}
+@media(max-width:992px){
+    .commitments-wrapper{
+        padding: 6vh;
+        gap: 6vh;
+    }
+    .commit-icon-cont{
+        height: 10vh;
+        width: 10vh;
+        font-size: 1.15em;
+    }
+    .commit-title{
+        font-size: 1.25em;
+    }
+    .commit-desc{
+        font-size: .8em;
+    }
+}
+@media(max-width:768px){
+    .commitments-wrapper{
+        padding: 2vh;
+        gap: 2vh;
+    }
+    .commitment-cont{
+        height: 45vh;
+    }
+    .commit-icon-cont{
+        height: 8vh;
+        width: 8vh;
+    }
+    .commit-desc{
+        width: 85%;
+        font-size: .7em;
+    }
+}
+@media(max-width:576px){
+    .commitments-wrapper{
+        grid-template-columns: none;
+        grid-template-rows: repeat(2,1fr);
+    }
+}
+
+/* Values Section -------------------------------------------------------------------------------- */
+.values-wrapper{
+    width: 100%;
+    height: fit-content;
+    padding: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vh;
+}
+.value-head-icon{
+    height: 15vh;
+    width: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    background-color:var(--commitIconColor);
+    color: #fff;
+    font-size: 2em;
+}
+.value-header{
+    color: var(--commitTitleColor);
+    font-size: 2em;
+    font-weight: 500;
+}
+.values-container{
+    background-color: var(--commitBgColor);
+    width: 85%;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    padding: 2vh;
+    gap: 2vh;
+}
+.value{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4vh;
+}
+.value-title{
+    color: var(--commitTitleColor);
+    font-size: 1.25em;
+    font-weight: 400;
+}
+.value-desc{
+    text-align: justify;
+    width: 70%;
+    color: var(--descColor);
+    font-size: .9em;
+}
+@media(max-width:768px){
+    .values-container{
+        height: fit-content;
+        grid-template-columns: none;
+        grid-template-rows: repeat(4,1fr);
+        width: 90%;
+        gap: 5vh;
+    }
+    .value-head-icon{
+        height: 10vh;
+        width: 10vh;
+        font-size: 1.25em;
+    }
+    .value-header{
+        font-size: 1.5em;
+    }
+    .value-title{
+        font-size: 1em;
+        font-weight: 500;
+    }
+    .value-desc{
+        font-size: .8em;
+    }
+}
+
+
+/* Chairman CEO Section------------------------------------------------------------------------ */
+
+.chairman-ceo{
+    margin-top: 10vh;
+    height: fit-content;
+    width: 100%;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+}
+.person-cont{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 2vh;
+    width: 80%;
+    height: fit-content;
+    gap: 4vh;
+}
+.person-img-cont,.speech-cont{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+.speech-title{
+    color: #474747;
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+}
+.person-name{
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #474747;
+}
+.speech-desc{
+    color: var(--descColor);
+    text-align: justify;
+    font-size: .9em;
+}
+.person-img-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chairman-bg{
+    background-color: #46a0a0;
+    height: 90%;
+    width: 90%;
+}
+.ceo-bg{
+    background-color: #52a7e0;
+    height: 90%;
+    width: 90%;
+}
+.person-img{
+    background-position: center;
+    background-size: 100% 100%;
+    height: 110%;
+    width: 95%;
+    transform: translateY(-9%);
+}
+.chairman-img{
+    background-image: url('https://iic.edu.np/image/about-us/chairman.png');
+}
+.ceo-img{
+    background-image: url('https://iic.edu.np/image/about-us/ceo.png');
+}
+@media(max-width:1200px){
+    .person-cont{
+        width: 90%;
+    }
+}
+@media(max-width:992px){
+    .person-cont{
+        width: 100%;
+    }
+    .ceo-bg,.chairman-bg{
+        width: 100%;
+    }
+    .speech-title{
+        font-size: 1.5em;
+    }
+}
+@media(max-width:768px){
+    .person-cont{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .person-cont:nth-child(2){
+        flex-direction: column;
+    }
+    .person-img-cont{
+        width: 60%;
+    }
+    .speech-cont{
+        height: fit-content;
+    }
+    .speech-desc{
+        width: 70%;
+    }
+}
+@media(max-width:576px){
+    .person-img-cont{
+        height: 50vh;
+        width: 90%;
+    }
+    .speech-desc{
+        width: 100%;
+        font-size: .8em;
+    }
+    .speech-title{
+        font-size: 1.15em;
+    }
+    .chairman-ceo{
+        padding: 0vh;
+    }
+}
+
+/* Why KIC Section ------------------------------------------------------------ */
+
+.why-kic-wrapper{
+    margin-top: 6vh;
+    height: fit-content;
+    width: 100%;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+}
+.why-title{
+    font-size: 3em;
+    font-weight: 600;
+    color: #424242;
+    padding: 2vh 0vh;
+}
+.why-item{
+    height: fit-content;
+    width: 80%;
+    padding: 2vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2vh;
+}
+.why-desc-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+    gap: 2vh;
+}
+.why-img-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    display: flex;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.why-image{
+    height: 100%;
+    width: 100%;
+}
+.why-item-title{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: rgb(71, 71, 71);
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 2px;
+}
+.why-desc{
+    text-align: justify;
+    font-size: .9em;
+    color: var(--descColor);
+}
+@media(max-width:992px){
+    .why-kic-wrapper{
+        gap: 3vh;
+    }
+    .why-title{
+        font-size: 2em;
+    }
+    .why-item{
+        width: 90%;
+    }
+    .why-img-cont{
+        height: 50vh;
+    }
+    .why-item-title{
+        font-size: 1.15em;
+    }
+    .why-desc{
+        font-size: .9em;
+    }
+}
+@media(max-width:768px){
+    .why-item{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .why-desc{
+        padding-bottom: 5vh;
+    }
+    .why-item:nth-child(even){
+        flex-direction: column;
+    }
+    .why-img-cont{
+        height: 40vh;
+    }
+    .why-item{
+        padding: 0vh;
+    }
+    .why-desc-cont{
+        padding: 0vh;
+    }
+    .why-desc{
+        font-size: .8em;
+    }
+}
+
+/*Family Counter Section*/
+
+.family-counter{
+    margin-top: 5vh;
+    height: fit-content;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 10vh 5vh;
+    gap: 5vh;
+    color:#339afa;
+    background-color: rgb(238, 250, 255);
+}
+.family-title{
+    width: 100%;
+    font-size: 2.5em;
+    font-weight: 600;
+    text-align: center;
+}
+.member-cont{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5vh;
+}
+.member-num-cont{
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #339afa;
+    border-radius: 1vh;
+    color: #339afa;
+    gap: 1vh;
+}
+.member-num-cont .fa-solid{
+    font-size: 1.5em;
+}
+.member-num{
+    font-size: 3em;
+    font-weight: 600;
+}
+.member-name{
+    font-weight: 600;
+    font-size: 1.15em;
+}
+@media(max-width:992px){
+    .member-cont{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .member-num-cont{
+        height: 30vh;
+        width: 30vh;
+    }
+    .member-num{
+        font-size: 1.75em;
+    }
+    .member-name{
+        font-size: .95em;
+    }
+}
+@media(max-width:768px){
+    .member-num-cont{
+        height: 25vw;
+        width: 100%;
+        font-size: .65em;
+    }
+    .family-title{
+        font-size: 1.5em;
+    }
+    .member-cont{
+        gap: 2vh;
+    }
+    .family-counter{
+        padding:10vh 2vh;
+    }
+}
+
+/*Our Teachers*/
+
+.our-teachers{
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.our-teachers-title{
+    color: #b12513;
+    font-size: 2em;
+    font-weight: 550;
+}
+.teachers-silder{
+    height: fit-content;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    padding: 5px;
+    margin-top: 5vh;
+}
+.left-btn-cont,.right-btn-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-btn,.right-btn{
+    font-size: .8em;
+    height: 6vh;
+    width: 6vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #b12513;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgb(201, 201, 201);
+}
+.left-btn:hover,.right-btn:hover{
+    transform: scale(1.1,1.1);
+    transition: .15s ease;
+}
+.slider-screen{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    overflow-x: hidden;
+    padding: 5px;
+}
+.teacher-slides{
+    height: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    display: grid;
+    grid-template-rows: 3fr 1fr 2fr;
+}
+.teacher-profile{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #474747;
+    font-weight: 600;
+}
+.quotes{
+    color: #474747;
+    width: 100%;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    padding-left: 15vh;
+}
+.teacher-desk{
+    font-size: .8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+.teacher-desk p{
+    width: 75%;
+    font-style: italic;
+}
+.teacher-img{
+    height: 25vh;
+    width: 25vh;
+    border-radius: 50%;
+    background-position: center;
+    background-size: 100% 100%;
+}
+#tchr-img-1{
+    background-image: url('teachers_img/teacher-1.jpg');
+}
+#tchr-img-2{
+    background-image: url('teachers_img/teacher-2.jpg');
+}
+#tchr-img-3{
+    background-image: url('teachers_img/teacher-3.jpg');
+}
+@media(max-width:768px){
+    .teacher-desk p{
+        width: 100%;
+    }
+    .our-teachers-title{
+        font-size: 1.25em;
+    }
+}
+@media(max-width:576px){
+    .teachers-silder{
+        margin-top: 2vh;
+    }
+}

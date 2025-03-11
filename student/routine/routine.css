@@ -1,0 +1,170 @@
+.nav-btns-cont .nav-btn:nth-child(1){
+    background-color: #000;
+    color: #fff;
+}
+
+
+body{
+    overflow-y: hidden !important;
+}
+
+.panel-right{
+    height: 80vh;
+    width: 100%;
+    background-color: var(--panelBg);
+    border-radius: var(--panelRadius);
+    padding: var(--panelGap);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.panel-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vh 2vh;
+}
+.panel-title{
+    font-size: 1.25em;
+    font-weight: 500;
+}
+.routine-nav-cont{
+    display: flex;
+    gap: var(--panelGap);
+    font-size: 1.15em;
+    align-items: center;
+}
+.routine-btn{
+    cursor: pointer;
+}
+.schedule-cont{
+    height: 100%;
+    width: auto;
+    background-color: #fff;
+    border-radius: var(--panelRadius);
+    padding: var(--panelGap);
+    display: flex;
+    flex-direction: column;
+}
+.date-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #202020;
+    font-weight: normal;
+    font-size: .6em;
+}
+.schedule-head{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2vh;
+}
+.panel-title{
+    font-size: 1.25em;
+    font-weight: 400;
+}
+.schedule-days{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: fit-content;
+    gap: 2vh;
+    padding-bottom: 2vh;
+}
+/* .days{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: .8em;
+    border: 1px solid rgb(126, 126, 126);
+    border-radius: 1vh;
+}
+.days:hover{
+    background-color: #000;
+    transition: .25s ease;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+}
+table{
+    border: 1px solid grey;
+    width: 100%;
+    font-weight: 300;
+    font-size: .7em;
+    height: 58vh;
+    table-layout: fixed;
+    border-spacing: 0;
+    border-radius: 1vh;
+}
+td{
+    text-align: center;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+table td:nth-child(9) {
+    border-right: none;
+}
+table tr:nth-child(9) td {
+    border-bottom: none;
+}
+@media(max-width:525px){
+    .schedule-cont{
+        padding: 2vh;
+    }
+    .days{
+        height: 6vh;
+        width: 6vh;
+        font-size: .6em;
+    }
+    table{
+        transform: translateY(0vh);
+        font-size: .5em;
+        width: 100%;
+    }
+    .schedule-days{
+        width: 100%;
+    }
+}@media(max-width:445px){
+    .schedule-days{
+        gap: 5px;
+    }
+    .days{
+        height: 5vh;
+        width: 5vh;
+        font-size: .5em;
+    }
+} */
+.table-cont{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th,td{
+    font-weight: normal;
+    text-align: center;
+    font-size: .8em;
+    border: 1px solid grey;
+    width: 50px;
+}
+input{
+    outline: none;
+    border: none;
+    width: 100%;
+    text-align: center;
+    font-size: .8em;
+}
+#dateInput{
+    font-size: 20px;
+    margin: 10px 0px;
+}

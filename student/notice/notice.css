@@ -1,0 +1,107 @@
+.nav-btns-cont .nav-btn:nth-child(3){
+    background-color: #000;
+    color: #fff;
+}
+
+.panel-right{
+    height: 80vh;
+    width: 100%;
+    background-color: var(--panelBg);
+    border-radius: var(--panelRadius);
+    padding: var(--panelGap);
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+.panel-title{
+    font-size: 1.25em;
+    font-weight: 500;
+    align-items: center;
+    display: flex;
+    gap: 1vh;
+}
+.notice-cont{
+    height: 70vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(auto,1fr);
+    gap: var(--panelGap);
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+.notice{
+    height: 45vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--panelRadius);
+    background-color: #fdff90;
+}
+.notice-title{
+    text-align: center;
+    height: 8vh;
+    padding: 2vh;
+    font-size: 1.25em;
+    text-transform: uppercase;
+}
+.notice-desc{
+    text-align: center;
+    height: 100%;
+    font-size: .8em;
+    padding: 2vh;
+}
+
+.notice-box {
+    width: 100%;
+    height: 300px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for the notice box */
+.notice-box:hover {
+    transform: scale(1.05);
+}
+
+/* Image styling */
+.notice-image {
+    width: 100%;
+    height: 150px; /* Adjust image height */
+    object-fit: cover;
+}
+
+/* Title and Date styling */
+.notice-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.notice-date {
+    font-size: 14px;
+    color: #666;
+}
+
+@media(max-width:768px){
+    .notice-cont{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width:576px){
+    .notice-cont{
+        grid-template-columns: 1fr;
+    }
+}
+@media(max-width:424px){
+    .panel-title{
+        flex-direction: column;
+    }
+}

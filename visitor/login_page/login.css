@@ -1,0 +1,283 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.toast{
+    z-index: 5;
+}
+body{
+    overflow-y: hidden;
+}
+a{
+    text-decoration: none;
+}
+/* Login Section */
+.wrapper{
+    height: fit-content;
+    padding: 8vh 0vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    padding: 0vh;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border-radius: 2vh;
+    box-shadow: 0px 0px 5px rgb(180, 180, 180);
+}
+.form-container{
+    height: 70vh;
+    width: auto;
+    background-color: rgb(238, 246, 253);
+    border-radius: 2vh 0vh 0vh 2vh;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+}
+.login-head{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 4vh;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--primThemeColor);
+    padding-right: 2vh;
+}
+.signup-input-boxs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-type{
+    padding: 1vh;
+    background-color: rgb(238, 246, 253);
+    border: none;
+}
+.login-input-cont{
+    height: fit-content;
+    width: 100%;
+    padding: 2vh;
+    display: grid;
+    gap: 2vh;
+    grid-template-rows: repeat(2,1fr);
+}
+input{
+    height: 6vh;
+    padding-left: 2vh;
+    border: none;
+    border-radius: 1vh;
+    box-shadow: 0px 0px 2px 0px black;
+}
+input:focus{
+    outline: none;
+}
+.forgot-pw-cont{
+    width: 100%;
+    font-size: .7em;
+    text-align: center;
+    margin-top: 4vh;
+}
+.forgot-text{
+    color: royalblue;
+    font-weight: 600;
+    text-decoration: underline;
+}
+.forgot-text:hover{
+    color: var(--secThemeColor);
+    transition: var(--transition);
+}
+.login-btn-cont{
+    padding: 4vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+}
+.login-btn{
+    width: 100%;
+    padding: 2vh;
+    border: none;
+    border-radius: 2vh;
+    background-color: royalblue;
+    color: var(--textColor);
+    font-weight: 600;
+    cursor: pointer;
+}
+.login-btn:hover{
+    background-color: var(--secThemeColor);
+    transition: var(--transition);
+}
+.signup-cont{
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-left{
+    color: var(--primThemeColor);
+    font-size: .7em;
+}
+.text-right{
+    color: royalblue;
+    font-size: .8em;
+    font-weight: 600;
+    text-decoration: underline;
+}
+.text-right:hover{
+    color: var(--secThemeColor);
+    transition: var(--transition);
+    cursor: pointer;
+}
+.poster-container{
+    height: 70vh;
+    width: 40vw;
+    background-image: url('college_vector.png');
+    background-size: 100% 100%;
+    background-position: center;
+    border-radius: 0vh 2vh 2vh 0vh;
+    position: relative;
+}
+.kantipur-text-cont{
+    padding-left: 2vh;
+    padding-top: 4vh;
+    font-size: 2.5em;
+    font-weight: 100;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+}
+.slogan-cont{
+    padding-left: 2vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 200;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+}
+/* Login Signup Toggle */
+.signup-slider{
+    height: 70vh;
+    width: 40vw;
+    background-color: rgb(230, 230, 230);
+    border-radius: 2vh 0vh 0vh 2vh;
+    padding: 2vh;
+    position: absolute;
+    display: none;
+}
+.signup-head{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 4vh;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--primThemeColor); 
+}
+.signup-input-cont{
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3,1r);
+    padding: 2vh;
+    gap: 4vh;
+}
+.role{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+label[for="student-radio"], label[for="teacher-radio"] {
+    padding: 1vh 3vh;
+    border: 2px solid #34aeff; /* Bright blue border for a tech vibe */
+    border-radius: 50px; /* Rounded corners for a futuristic feel */
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    text-transform: uppercase; /* For a more techy, streamlined look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    transition: all 0.3s ease-in-out; /* Smooth transitions on hover */
+}
+
+label[for="student-radio"]:hover, label[for="teacher-radio"]:hover {
+    background-color: #34aeff; /* Glowing background on hover */
+    color: #1f1f1f; /* Dark text for contrast */
+    border: none; /* Border change on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+input:checked+label{
+    background-color: #007bb5; /* Darker blue when clicked */
+    color: #fff; /* Keep text color white */
+    transform: scale(0.98); /* Slightly shrink to simulate pressing effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Inner shadow for pressed effect */
+}
+input[type="radio"]{
+    display: none;
+}
+.create-acc-cont{
+    margin-top: 1vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+}
+.create-acc-btn{
+    padding: 2vh;
+    width: 100%;
+    border: none;
+    background-color: royalblue;
+    color: var(--textColor);
+    border-radius: 2vh;
+    cursor: pointer;
+    font-weight: 500;
+}
+.create-acc-btn:hover{
+    background-color: var(--secThemeColor);
+    transition: var(--transition);
+}
+.already-text-cont{
+    margin-top: 1vh;
+    padding: 1vh;
+    font-size: .7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-link{
+    font-size: 1.1em;
+    font-weight: 600;
+    text-decoration: underline;
+    color: royalblue;
+    cursor: pointer;
+}
+.login-link:hover{
+    color: var(--secThemeColor);
+    transition: var(--transition);
+}
+
+
+/* Form Responsiveness */
+
+@media (max-width:992px){
+    .poster-container{
+      display: none;  
+    }
+    .container,.form-container,.signup-slider{
+        width: 80vw;
+    }
+    .signup-slider{
+        left: 10vw;
+        border-radius: 2vh;
+    }
+}
+
